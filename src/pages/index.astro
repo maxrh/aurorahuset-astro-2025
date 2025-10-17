@@ -5,15 +5,14 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Steps from '~/components/widgets/Steps.astro';
+
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Aurorahuset — Et trygt krisecenter for kvinder udsat for vold',
+  description: 'Aurorahuset tilbyder trygge rammer, professionel støtte og omsorg til kvinder og børn, der har været udsat for vold. Døgnåben hjælp på 53 71 61 00.',
   ignoreTitleTemplate: true,
 };
 ---
@@ -21,313 +20,286 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
-  >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
-    </Fragment>
+	<Hero
+		actions={[
+			{
+				variant: 'primary',
+				text: 'Ring 53 71 61 00',
+				href: 'tel:53716100',
+				icon: 'tabler:phone',
+			},
+			{ text: 'Læs mere', href: '#hjaelp' },
+		]}
+		image={{ src: '~/assets/images/hero-image.png', alt: 'Aurorahuset - trygt krisecenter' }}
+	>
+		<Fragment slot="title">
+			Velkommen til <span class="text-accent dark:text-white">Aurorahuset</span>
+		</Fragment>
 
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
-    </Fragment>
-  </Hero>
+    	<Fragment slot="subtitle">
+			<span class="font-semibold">Et trygt og fagligt funderet krisecenter</span> for kvinder, der er udsat for vold, trusler eller anden form for overgreb.
+			<br><br>
+			Vi arbejder med traumebevidst tilgang, recovery og responsbaseret praksis, og vi møder dig med respekt, tillid og støtte – uanset din situation.
+		</Fragment>
+	</Hero>
 
-  <!-- Note Widget ******************* -->
+	<!-- Akut hjælp section ******************* -->
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
+	<CallToAction
+		id="hjaelp"
+		title="Har du brug for hjælp?"
+		subtitle="Hvis du har brug for at komme væk fra volden – eller har brug for råd og vejledning – så kontakt os:"
+		actions={[
+		{
+			variant: 'primary',
+			text: 'Ring nu: 53 71 61 00',
+			href: 'tel:53716100',
+			icon: 'tabler:phone',
+		},
+		{
+			variant: 'secondary',
+			text: 'Send mail',
+			href: 'mailto:info@kcaurora.dk',
+			icon: 'tabler:mail',
+		},
+		]}
+	>
+		<Fragment slot="bg">
+			<div class="absolute inset-0 bg-stone-200 dark:bg-red-900/20"></div>
+		</Fragment>
+	</CallToAction>
 
-  <!-- Features Widget *************** -->
+  <Note title="Døgnåben vagttelefon: 53 71 61 00" description="Rådgivning (alle dage kl. 10–17): 53 71 61 00 | Mail: info@kcaurora.dk | Er du i tvivl, om du er udsat for vold? Så er du også velkommen til at ringe. Vi er her." />
+
+  <!-- Om Aurorahuset Features *************** -->
 
   <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
+    id="opholdet"
+    tagline="Om Aurorahuset"
+    title="🏡 Et trygt sted for dig"
+    subtitle="Aurorahuset er et mindre krisecenter med plads til 9 kvinder og eventuelt deres børn. Vi har fokus på at skabe et roligt og trygt miljø, hvor du kan få den nødvendige støtte og tid til at finde fodfæste."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Eget værelse',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'Eget værelse med adgang til fælles badeværelse, køkken, stue og orangeriet',
+        icon: 'tabler:bed',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Rolige omgivelser',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'Rolige, grønne omgivelser med have og shelter på en fredelig landejendom',
+        icon: 'tabler:tree',
       },
       {
-        title: 'Best Practices',
+        title: 'Fællesskab med respekt',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'Et fællesskab med respekt og privatliv, hvor du kan føle dig tryg',
+        icon: 'tabler:heart',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Traumebevidst tilgang',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          'Professionel støtte baseret på traumebevidst tilgang, recovery og responsbaseret praksis',
+        icon: 'tabler:shield-heart',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Børn velkommen',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          'Vi har plads til kvinder med børn og fokuserer på hele familiens trivsel',
+        icon: 'tabler:baby-carriage',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Sikkerhed og tryghed',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'Ejendommen er sikret med alarm, videoovervågning og andre sikkerhedsforanstaltninger',
+        icon: 'tabler:shield-check',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Hvem kan få hjælp **************** -->
 
-  <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+  <Features2
+    title="👩‍🦰 Hvem kan få hjælp?"
+    subtitle="Vi har børn i huset – derfor kan vi desværre ikke tilbyde ophold til kvinder med aktivt stof- eller alkoholbrug og med ubehandlede alvorlige psykiatriske sygdomme"
+    tagline="Målgruppe"
     items={[
       {
-        title: 'Built on top of Astro 5.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+        title: 'Kvinder udsat for vold',
+        description: 'Kvinder, der er udsat for psykisk, fysisk, seksuel eller økonomisk vold',
+        icon: 'tabler:heart-handshake',
       },
       {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+        title: 'Mødre med børn',
+        description: 'Vi har plads til kvinder med børn og støtter hele familien',
+        icon: 'tabler:users',
       },
       {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+        title: 'Alle baggrunde',
+        description: 'Uanset kultur, sprog eller tidligere erfaringer - vi møder dig hvor du er',
+        icon: 'tabler:world',
+      },
+    ]}
+  />
+
+  <!-- Hvad kan du forvente **************** -->
+
+  <Content
+    isAfterContent
+    title="Hvad kan du forvente hos os?"
+    subtitle="📞 Vi lytter – også hvis du er i tvivl: 53 71 61 00"
+    items={[
+      {
+        title: 'Omsorgsfuld og professionel støtte',
+        description: 'Erfarne medarbejdere som møder dig med respekt og faglig kompetence',
+      },
+      {
+        title: 'Fællesskab med andre kvinder',
+        description: 'Mulighed for støtte og forståelse fra andre kvinder i lignende livssituation',
+      },
+      {
+        title: 'Dit eget tempo',
+        description: 'Tid og plads til at finde fodfæste – vi respekterer din proces og dine grænser',
+      },
+      {
+        title: 'Støtte til vejen videre',
+        description: 'Hjælp til at planlægge og forberede det næste skridt i dit liv, når du er klar',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Støttende hænder',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Vi er her for dig</h3>
+      Hos os får du den støtte og omsorg, du har brug for for at komme videre i dit liv.
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
+  <!-- Vores arbejde - Værdigrundlag **************** -->
 
   <Content
     isReversed
     isAfterContent
+    id="vores-arbejde"
+    title="Vores værdigrundlag"
+    subtitle={`"Al sand hjælp begynder med en ydmygelse. Hjælperen må først ydmyge sig under den, han vil hjælpe… det at hjælpe er ikke at herske, men at tjene." — Søren Kierkegaard`}
     items={[
       {
-        title: 'Enhanced user engagement',
+        title: 'Traumebevidst tilgang',
         description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+          'Vi forstår hvordan vold og overgreb påvirker mennesker og tilrettelægger vores arbejde med fokus på tryghed og stabilitet.',
       },
       {
-        title: 'Continuous improvement',
+        title: 'Recovery-orienteret',
         description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
+          'Vi tager afsæt i den enkeltes ønsker, mål og ressourcer og arbejder med håb som drivkraft for forandring.',
       },
       {
-        title: 'Time and resource efficiency',
+        title: 'Responsbaseret praksis',
         description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
+          'Vi anerkender og styrker kvinders modstandsstrategier og handlekraft fremfor at fokusere på mangler.',
       },
       {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
+        title: 'Respekt og ligeværdighed',
+        description:
+          'Vi møder alle med respekt, støtte og tryghed – og ser styrker frem for fejl hos kvinder og børn.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
+      src: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Omsorgsfulde hænder',
     }}
   >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Faglig og værdibaseret tilgang</h3>
+      Vi arbejder for at bringe håb og omsorg til kvinder og børn, styrke forældreskab og forebygge vold.
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
+  <!-- Steps Widget - Behandlingsforløb ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Vores 5 faser i behandlingsforløbet"
+    subtitle="Et struktureret forløb der støtter dig gennem din rejse mod helbredelse"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Fase 1: <span class="font-medium">Stabilisering</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          'Her fokuserer vi på at skabe tryghed og stabilitet. Vi hjælper med basale behov, etablerer daglige rutiner og arbejder med følelsesregulering.',
+        icon: 'tabler:shield-check',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Fase 2: <span class="font-medium">Integrering af traumeerfaringer</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          'I denne fase arbejder vi med at bearbejde traumatiske oplevelser på en tryg måde, så de kan integreres i dit livs historie.',
+        icon: 'tabler:heart',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Fase 3: <span class="font-medium">Relationsskabelse</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Vi fokuserer på at genopbygge tillid og skabe sunde relationer til andre mennesker og samfundet omkring dig.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Ready!',
-        icon: 'tabler:check',
+        title: 'Fase 4: <span class="font-medium">Personlig udvikling</span>',
+        description:
+          'Her arbejder vi med at styrke din identitet, selvværd og personlige mål for fremtiden.',
+        icon: 'tabler:plant',
+      },
+      {
+        title: 'Fase 5: <span class="font-medium">Forberedelse til et selvstændigt liv</span>',
+        description:
+          'Vi hjælper med at udvikle praktiske færdigheder og støtter overgangen til et selvstændigt liv uden for krisecenteret.',
+        icon: 'tabler:home',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      src: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
+      alt: 'Behandlingsforløb illustration',
     }}
   />
 
-  <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="Støt Aurorahuset"
+    subtitle="Din støtte gør en forskel i kampen mod vold"
+    id="stoet"
+    columns={3}
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
+        title: 'Donér penge',
+        description: 'Økonomisk støtte hjælper os med at drive centeret og tilbyde den bedste hjælp til kvinder og børn i krise.',
+        icon: 'tabler:heart',
       },
       {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+        title: 'Bliv frivillig',
+        description: 'Som frivillig kan du hjælpe med praktiske opgaver eller tilbyde dit faglige bidrag til vores arbejde.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: 'Donér varer',
+        description: 'Vi har altid brug for dagligvarer, tøj, legetøj og andre praktiske ting til kvinder og børn på centeret.',
+        icon: 'tabler:gift',
       },
     ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!-- Contact information ******************* -->
 
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
+  <Content
+    title="Kontakt og praktiske oplysninger"
+    subtitle="Find vigtige kontaktoplysninger og praktisk information om Aurorahuset"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
@@ -363,37 +335,29 @@ const metadata = {
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
+  <!-- Final CallToAction - Emergency Help *********** -->
 
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Ring nu 53 71 61 00',
+        href: 'tel:53716100',
+        icon: 'tabler:phone',
+      },
+      {
+        text: 'Ring 112 ved akut fare',
+        href: 'tel:112',
+        variant: 'secondary',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Har du brug for hjælp?<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Vi er her for dig</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Aurorahuset er døgnåbent alle årets dage. <br class="hidden md:inline" />Tøv ikke med at ringe - du er ikke alene.
     </Fragment>
   </CallToAction>
 </Layout>
