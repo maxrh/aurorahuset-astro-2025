@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -11,8 +11,8 @@ import Steps from '~/components/widgets/Steps.astro';
 
 
 const metadata = {
-  title: 'Aurorahuset — Et trygt krisecenter for kvinder udsat for vold',
-  description: 'Aurorahuset tilbyder trygge rammer, professionel støtte og omsorg til kvinder og børn, der har været udsat for vold. Døgnåben hjælp på 53 71 61 00.',
+  title: 'AuroraHuset — Et trygt krisecenter for kvinder udsat for vold',
+  description: 'AuroraHuset tilbyder trygge rammer, professionel støtte og omsorg til kvinder og børn, der har været udsat for vold. Døgnåben hjælp på 53 71 61 00.',
   ignoreTitleTemplate: true,
 };
 ---
@@ -20,7 +20,11 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-	<Hero
+	<Hero2
+		image={{
+			src: '~/assets/images/hero-illu-nobg.svg',
+			alt: 'Caos Image',
+		}}
 		actions={[
 			{
 				variant: 'primary',
@@ -30,18 +34,15 @@ const metadata = {
 			},
 			{ text: 'Læs mere', href: '#hjaelp' },
 		]}
-		image={{ src: '~/assets/images/hero-image.png', alt: 'Aurorahuset - trygt krisecenter' }}
 	>
 		<Fragment slot="title">
-			Velkommen til <span class="text-accent dark:text-white">Aurorahuset</span>
+			Et trygt og fagligt funderet krisecenter for kvinder
 		</Fragment>
 
     	<Fragment slot="subtitle">
-			<span class="font-semibold">Et trygt og fagligt funderet krisecenter</span> for kvinder, der er udsat for vold, trusler eller anden form for overgreb.
-			<br><br>
 			Vi arbejder med traumebevidst tilgang, recovery og responsbaseret praksis, og vi møder dig med respekt, tillid og støtte – uanset din situation.
 		</Fragment>
-	</Hero>
+	</Hero2>
 
 	<!-- Akut hjælp section ******************* -->
 

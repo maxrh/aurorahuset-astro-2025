@@ -1,0 +1,99 @@
+---
+import Button from '~/components/ui/Button.astro';
+
+interface HeroBgProps {
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  content?: string;
+  actions?: any[];
+  image?: any;
+  id?: string;
+  bg?: string;
+  overlayColor?: string;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+
+  content = await Astro.slots.render('content'),
+  actions = await Astro.slots.render('actions'),
+  image = await Astro.slots.render('image'),
+
+  id,
+  bg = await Astro.slots.render('bg'),
+  overlayColor = 'bg-black/40', // Default semi-transparent black overlay
+} = Astro.props as HeroBgProps;
+
+// Extract image source from image prop
+const imageSrc = typeof image === 'object' && image?.src ? image.src : null;
+---
+
+<section 
+  class="relative md:-mt-[96px] not-prose min-h-screen flex items-center"
+  style={imageSrc ? `background-image: url(${imageSrc}); background-size: cover; background-position: center; background-attachment: fixed;` : ''}
+  {...id ? { id } : {}}
+>
+  <!-- Background overlay -->
+  <div class={`absolute inset-0 ${overlayColor}`} aria-hidden="true"></div>
+  
+  <!-- Custom background slot -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <slot name="bg">
+      {bg ? <Fragment set:html={bg} /> : null}
+    </slot>
+  </div>
+
+  <!-- Content container -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 z-10 w-full">
+    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+    <div class="py-12 md:py-20">
+      <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+        {
+          tagline && (
+            <p
+              class="text-base text-white/90 font-bold tracking-wide uppercase intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+              set:html={tagline}
+            />
+          )
+        }
+        {
+          title && (
+            <h1
+              class="text-5xl md:text-6xl font-black leading-tighter tracking-tighter mb-4 font-heading intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+              set:html={title}
+            />
+          )
+        }
+        <div class="max-w-3xl mx-auto">
+          {
+            subtitle && (
+              <p
+                class="text-xl text-base/90 mb-6 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+                set:html={subtitle}
+              />
+            )
+          }
+          {
+            actions && (
+              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+                {Array.isArray(actions) ? (
+                  actions.map((action) => (
+                    <div class="flex w-full sm:w-auto">
+                      <Button {...(action || {})} class="w-full sm:mb-0" />
+                    </div>
+                  ))
+                ) : (
+                  <Fragment set:html={actions} />
+                )}
+              </div>
+            )
+          }
+        </div>
+        {content && <Fragment set:html={content} />}
+      </div>
+    </div>
+  </div>
+</section>
