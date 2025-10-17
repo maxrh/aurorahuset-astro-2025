@@ -9,6 +9,8 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "dev:cms:start": "decap-server",
+    "dev:cms": "echo 'Starting CMS development mode. Use config-local.yml manually if needed.' && npm run dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -53,6 +55,7 @@
     "@typescript-eslint/parser": "^8.39.0",
     "astro-compress": "2.3.8",
     "astro-eslint-parser": "^1.2.2",
+    "decap-server": "^3.3.1",
     "eslint": "^9.33.0",
     "eslint-plugin-astro": "^1.3.1",
     "globals": "^16.3.0",
