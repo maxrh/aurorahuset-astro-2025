@@ -1,0 +1,17 @@
+name = "aurorahuset-astro-2025"
+compatibility_date = "2023-12-01"
+
+[env.production]
+route = ""
+zone_id = ""
+
+[[env.production.rules]]
+type = "Rule"
+globs = ["**/*"]
+
+[build]
+command = "npm run build"
+cwd = "."
+
+[build.upload]
+format = "service-worker"
