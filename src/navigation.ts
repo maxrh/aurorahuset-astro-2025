@@ -7,7 +7,7 @@ export const headerData = {
       href: '#hjaelp',
     },
     {
-      text: 'Om opholdet',
+      text: 'Om AuroraHuset',
       href: '#opholdet',
     },
     {
@@ -15,7 +15,7 @@ export const headerData = {
       href: '#vores-arbejde',
     },
     {
-      text: 'Støt Aurorahuset',
+      text: 'Støt & Samarbejde',
       href: '#stoet',
     },
     

@@ -182,7 +182,7 @@ export interface Disclaimer {
 
 // COMPONENTS
 export interface CallToAction extends Omit<HTMLAttributes<'a'>, 'slot'> {
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'link';
+  variant?: 'primary' | 'primaryInverse' | 'secondary' | 'secondaryInverse' | 'tertiary' | 'link';
   text?: string;
   icon?: string;
   classes?: Record<string, string>;
