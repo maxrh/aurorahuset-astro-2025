@@ -8,14 +8,13 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 
 
 const metadata = {
-  title: 'AuroraHuset — Et trygt krisecenter for kvinder udsat for vold',
-  description: 'AuroraHuset tilbyder trygge rammer, professionel støtte og omsorg til kvinder og børn, der har været udsat for vold. Døgnåben hjælp på 53 71 61 00.',
-  ignoreTitleTemplate: true,
+	title: 'AuroraHuset — Et trygt krisecenter for kvinder udsat for vold',
+	description: 'AuroraHuset tilbyder trygge rammer, professionel støtte og omsorg til kvinder og børn, der har været udsat for vold. Døgnåben hjælp på 53 71 61 00.',
+	ignoreTitleTemplate: true,
 };
 ---
 
@@ -37,19 +36,16 @@ const metadata = {
 				icon: 'tabler:phone',
 			},
 			{ text: 'Læs mere', href: '#hjaelp' },
-			{
-				variant: 'secondary',
-				text: 'this is a button',
-				href: '#',
-			},
 		]}
 	>
 		<Fragment slot="title">
-			Et trygt og fagligt funderet krisecenter for kvinder
+			Velkommen til AuroraHuset
 		</Fragment>
 
-    	<Fragment slot="subtitle">
-			Vi arbejder med traumebevidst tilgang, recovery og responsbaseret praksis, og vi møder dig med respekt, tillid og støtte – uanset din situation.
+		<Fragment slot="subtitle">
+			Et trygt og fagligt funderet krisecenter for kvinder, der har været udsat for vold, trusler, social kontrol eller anden form for overgreb.
+			<br /><br />Vi arbejder med Traumebevidst Tilgang (TBT), Recovery og Responsbaseret Praksis (RBP).
+			<br />Hos os bliver du mødt med respekt, tillid og støtte – uanset din situation.
 		</Fragment>
 	</Hero2>
 
@@ -62,14 +58,15 @@ const metadata = {
 		actions={[
 			{
 				variant: 'primary',
-				text: 'Ring nu: 53 71 61 00 ',
-				href: 'tel:53716100',
+				text: 'Ring nu: 53 71 46 88 ',
+				href: 'tel:53714688',
 				icon: 'tabler:phone',
 			},
 			{
 				text: 'Ring 112 ved akut fare',
 				href: 'tel:112',
 				variant: 'secondaryInverse',
+				icon: 'tabler:phone',
 			},
 			
 		]}
@@ -79,15 +76,29 @@ const metadata = {
 		</Fragment>
 	</CallToAction>
 
-  	<Note title="Døgnåben vagttelefon: 53 71 61 00" description="Rådgivning (alle dage kl. 10–17): 53 71 61 00 | Mail: info@kcaurora.dk | Er du i tvivl, om du er udsat for vold? Så er du også velkommen til at ringe. Vi er her." />
+	<section class="border-b not-prose">
+		<div class="bg-page rounded-xl p-14 max-w-5xl mx-auto lg:flex lg:gap-20">
+			<div class="basis-1/2 text-lg space-y-1 mb-6 lg:mb-0">
+				<p><strong>Døgnåben vagttelefon:</strong> 53 71 46 88</p>
+				<p><strong>Rådgivning (alle dage kl. 10–17):</strong> Samme nummer</p>
+				<p><strong>Mail:</strong> info@kcaurora.dk</p>
+			</div>
+			<div class="basis-1/2">
+				<p class="text-lg">Er du i tvivl, om du er udsat for vold? Så er du også velkommen til at ringe. <strong>Vi er her for dig.</strong></p>
+			</div>
+			
+		</div>
+	</section>
 
-  	<!-- Om Aurorahuset Features *************** -->
 
-  	<Features
+
+	<!-- Om AuroraHuset Features *************** -->
+
+	<Features
 		id="opholdet"
 		tagline="Om AuroraHuset"
-		title="Et trygt sted for dig og dine børn"
-		subtitle="Aurorahuset er et mindre krisecenter med plads til 9 kvinder og eventuelt deres børn. Vi har fokus på at skabe et roligt og trygt miljø, hvor du kan få den nødvendige støtte og tid til at finde fodfæste."
+		title="AuroraHuset er et krisecenter med plads til 8 kvinder og deres børn"
+		subtitle="Vi skaber et <strong>roligt og trygt miljø</strong>, hvor du kan få den støtte og tid, du behøver til at finde fodfæste og begynde på ny. Hos os får du:"
 		items={[
 			{
 				title: 'Eget værelse',
@@ -126,13 +137,20 @@ const metadata = {
 				icon: 'tabler:shield-check',
 			},
 		]}
-  	/>
+		text="Af hensyn til beboernes trivsel og allergier er kæledyr desværre ikke tilladt."
 
-  	<!-- Hvem kan få hjælp **************** -->
+	>
 
-  	<Features2
+		<Fragment slot="bg">
+			<div class="absolute inset-0 border-b"></div>
+		</Fragment>
+	</Features>
+
+	<!-- Hvem kan få hjælp **************** -->
+
+	<Features2
 		title="Hvem kan få hjælp?"
-		subtitle="Vi har børn i huset – derfor kan vi desværre ikke tilbyde ophold til kvinder med aktivt stof- eller alkoholbrug og med ubehandlede alvorlige psykiatriske sygdomme"
+		subtitle="AuroraHuset er for kvinder, der er udsat for <strong>vold – psykisk, fysisk, seksuel, økonomisk eller i form af social kontrol</strong>. Vi tilbyder et trygt og respektfuldt ophold, hvor du kan få ro, støtte og tid til at genfinde styrken til at leve et liv uden vold."
 		items={[
 			{
 				title: 'Kvinder udsat for vold',
@@ -150,48 +168,58 @@ const metadata = {
 				icon: 'tabler:world',
 			},
 		]}
-  	/>
+		text="Da der bor børn i huset, kan vi desværre ikke tilbyde ophold til kvinder med aktivt stof- eller alkoholbrug eller ubehandlede, alvorlige psykiatriske lidelser. Dette er for at beskytte både kvinders og børns trivsel – og sikre, at alle kan føle sig trygge."
+	>
 
-  	<!-- Hvad kan du forvente **************** -->
+		<Fragment slot="bg">
+			<div class="absolute inset-0 border-b"></div>
+		</Fragment>
+	</Features2>
 
-  	<Content
+	<!-- Hvad kan du forvente **************** -->
+
+	<Content
 		title="Hvad kan du forvente hos os?"
-		subtitle="Vi lytter – også hvis du er i tvivl: 53 71 61 00"
+		subtitle="I AuroraHuset møder du <strong>omsorgsfuld og professionel støtte</strong> fra erfarne og uddannede socialfaglige medarbejdere, der arbejder ud fra <strong>Traumebevidst Tilgang, Recovery og Responsbaseret Praksis.</strong>"
 		items={[
 			{
-				title: 'Omsorgsfuld og professionel støtte',
-				description: 'Erfarne medarbejdere som møder dig med respekt og faglig kompetence',
+				title: 'Tryghed og ro til at finde fodfæste – i dit eget tempo',
+				description: 'AuroraHuset tilbyder et roligt og trygt miljø, hvor du kan få den støtte og tid, du behøver for at finde fodfæste og begynde på ny – helt i dit eget tempo og med respekt for dine behov.',
 			},
 			{
-				title: 'Fællesskab med andre kvinder',
-				description: 'Mulighed for støtte og forståelse fra andre kvinder i lignende livssituation',
+				title: 'Støtte og rådgivning i forhold til din aktuelle situation',
+				description: 'Du får omsorgsfuld og professionel støtte fra erfarne socialfaglige medarbejdere, som vejleder og rådgiver ud fra din personlige livssituation, så du kan træffe de rigtige beslutninger for dig og dine børn.',
 			},
 			{
-				title: 'Dit eget tempo',
-				description: 'Tid og plads til at finde fodfæste – vi respekterer din proces og dine grænser',
+				title: 'Fællesskab med andre kvinder i lignende livssituationer',
+				description: 'AuroraHuset tilbyder et fællesskab med andre kvinder, der har oplevet lignende udfordringer, hvor der er plads til både nærvær og privatliv – og hvor solidaritet og gensidig respekt er i centrum.',
 			},
 			{
-				title: 'Støtte til vejen videre',
-				description: 'Hjælp til at planlægge og forberede det næste skridt i dit liv, når du er klar',
+				title: 'Hjælp til at skabe overblik over bolig, økonomi og fremtid',
+				description: 'Du får konkret hjælp til boligansøgning, økonomi, myndighedskontakt samt støtte til at skabe struktur for din fremtid, så du får overblik og tryghed omkring de praktiske forhold i livet efter volden.',
+			},
+			{
+				title: 'Respekt for dine valg, grænser og ønsker for dit liv',
+				description: 'Hos AuroraHuset mødes du med respekt, tillid og forståelse for dine valg, grænser og ønsker – indsatsen tilpasses altid dig, så du styrkes som hovedaktør i dit eget liv og kan tage skridt mod selvbestemmelse og varige løsninger.',
 			},
 		]}
 			image={{
 			src: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1887',
 			alt: 'Støttende hænder',
 		}}
-  	>
+	>
 		<Fragment slot="content">
-			<h3 class="text-2xl font-bold tracking-tight dark:text-stone-50 sm:text-3xl mb-2">Hos os får du den støtte og omsorg, du har brug for for at komme videre i dit liv</h3>
+			<h3 class="text-2xl font-bold tracking-tight dark:text-stone-50 sm:text-3xl mb-2">Du kan forvente:</h3>
 		</Fragment>
 
 		<Fragment slot="bg">
-			<div class="absolute inset-0 "></div>
+			<div class="absolute inset-0 border-b"></div>
 		</Fragment>
-  	</Content>
+	</Content>
 
-  	<!-- Vores arbejde - Værdigrundlag **************** -->
+	<!-- Vores arbejde - Værdigrundlag **************** -->
 
-  	<Content
+	<Content
 		isReversed
 		id="vores-arbejde"
 		tagline="Vores arbejde"
@@ -219,23 +247,23 @@ const metadata = {
 			src: 'https://images.unsplash.com/photo-1638062416317-ea9a015b5988?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764',
 			alt: 'Omsorgsfulde hænder',
 		}}
-  	>
+	>
 		<Fragment slot="content">
 			<h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
 			Vi arbejder for at bringe håb og omsorg til kvinder og børn, styrke forældreskab og forebygge vold</h3>
 		</Fragment>
 
 		<Fragment slot="bg">
-			<div class="absolute inset-0 dark:bg-transparent"></div>
+			<div class="absolute inset-0 border-b"></div>
 		</Fragment>
-  	</Content>
+	</Content>
 
-  	<!-- Steps Widget - Behandlingsforløb ****************** -->
+	<!-- Steps Widget - Behandlingsforløb ****************** -->
 
-  	<Steps
-    	title="Vores 5 faser i behandlingsforløbet"
-    	subtitle="Et struktureret forløb der støtter dig gennem din rejse mod helbredelse"
-    	items={[
+	<Steps
+		title="Vores 5 faser i behandlingsforløbet"
+		subtitle="Et struktureret forløb der støtter dig gennem din rejse mod helbredelse"
+		items={[
 			{
 				title: 'Fase 1: <span class="font-medium">Stabilisering</span>',
 				description:
@@ -267,16 +295,14 @@ const metadata = {
 				icon: 'tabler:home',
 			},
 		]}
-		
-	
-  	>
+	>
 		<Fragment slot="bg">
-			<div class="absolute inset-0 dark:bg-transparent"></div>
+			<div class="absolute inset-0 border-b"></div>
 		</Fragment>
 	</Steps>
 
 
-  	<Features2
+	<Features2
 		title="Støt & Samarbejde"
 		subtitle="Din støtte gør en forskel i kampen mod vold"
 		id="stoet"
@@ -298,13 +324,18 @@ const metadata = {
 				icon: 'tabler:gift',
 			},
 		]}
-  	/>
+	>
 
-  	<!-- Contact information ******************* -->
+		<Fragment slot="bg">
+			<div class="absolute inset-0 border-b"></div>
+		</Fragment>
+	</Features2>
 
-  	<FAQs
+	<!-- Contact information ******************* -->
+
+	<FAQs
 		title="Kontakt og praktiske oplysninger"
-		subtitle="Find vigtige kontaktoplysninger og praktisk information om Aurorahuset"
+		subtitle="Find vigtige kontaktoplysninger og praktisk information om AuroraHuset"
 		id="kontakt"
 		columns={3}
 		classes={{ container: '' }}
@@ -339,7 +370,7 @@ const metadata = {
 				"This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
 			},
 		]}
-  	/>
+	/>
 
 	<!-- Final CallToAction - Emergency Help *********** -->
 
@@ -365,11 +396,11 @@ const metadata = {
 		</Fragment>
 
 		<Fragment slot="subtitle">
-			Aurorahuset er døgnåbent alle årets dage. <br class="hidden md:inline" />Tøv ikke med at ringe eller skrive - du er ikke alene.
+			AuroraHuset er døgnåbent alle årets dage. <br class="hidden md:inline" />Tøv ikke med at ringe eller skrive - du er ikke alene.
 		</Fragment>
 
 		<Fragment slot="bg">
 			<div class="absolute inset-0 bg-contrast dark:bg-stone-50"></div>
 		</Fragment>
-  	</CallToAction>
+	</CallToAction>
 </Layout>

@@ -8,6 +8,7 @@ const {
 	title = await Astro.slots.render('title'),
 	subtitle = await Astro.slots.render('subtitle'),
 	tagline = await Astro.slots.render('tagline'),
+	text = await Astro.slots.render('text'),
 	items = [],
 	columns = 2,
 
@@ -33,4 +34,7 @@ const {
 			...((classes?.items as Record<string, never>) ?? {}),
 		}}
 	/>
+	<div class="text-center mt-24">
+		{ text && <div class="max-w-3xl text-sm mx-auto italic text-muted dark:text-slate-400" set:html={text} /> }
+	</div>
 </WidgetWrapper>
