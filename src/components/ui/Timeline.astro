@@ -23,7 +23,7 @@ const {
 {
 	items && items.length > 0 && (
 		<div class={containerClass}>
-			{items.map(({ title, description, icon, classes: itemClasses = {} }, index = 0) => (
+			{items.map(({ title, description, icon, classes: itemClasses = {}, listItems }, index = 0) => (
 				<div
 					class={twMerge(
 						'flex intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
@@ -51,6 +51,16 @@ const {
 								class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)}
 								set:html={description}
 							/>
+						)}
+						{listItems && listItems.length > 0 && (
+							<ul class="mt-2 space-y-0">
+								{listItems.map((item) => (
+									<li class="flex items-start">
+										<span class="text-primary mr-2 rtl:mr-0 rtl:ml-2">•</span>
+										<span class="text-muted" set:html={item} />
+									</li>
+								))}
+							</ul>
 						)}
 					</div>
 				</div>

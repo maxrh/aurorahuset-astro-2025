@@ -139,6 +139,7 @@ export interface Item {
   classes?: Record<string, string>;
   callToAction?: CallToAction;
   image?: Image;
+  listItems?: string[];
 }
 
 export interface Price {
@@ -265,9 +266,9 @@ export interface Faqs extends Omit<Headline, 'classes'>, Widget {
 
 export interface Steps extends Omit<Headline, 'classes'>, Widget {
   items?: Array<Item>;
-  callToAction?: string | CallToAction;
   image?: string | Image;
   isReversed?: boolean;
+  actions?: string | CallToAction | CallToAction[];
 }
 
 export interface Content extends Omit<Headline, 'classes'>, Widget {
@@ -277,7 +278,7 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
   columns?: number;
   isReversed?: boolean;
   isAfterContent?: boolean;
-  callToAction?: CallToAction;
+  actions?: string | CallToAction | CallToAction[];
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
