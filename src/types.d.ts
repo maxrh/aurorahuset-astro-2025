@@ -253,6 +253,7 @@ export interface Features extends Omit<Headline, 'classes'>, Widget {
   isBeforeContent?: boolean;
   isAfterContent?: boolean;
   text?: string;
+  actions?: string | CallToAction[];
 }
 
 export interface Faqs extends Omit<Headline, 'classes'>, Widget {

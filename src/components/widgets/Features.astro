@@ -2,6 +2,7 @@
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import ItemGrid from '~/components/ui/ItemGrid.astro';
 import Headline from '~/components/ui/Headline.astro';
+import Button from '~/components/ui/Button.astro';
 import type { Features as Props } from '~/types';
 
 const {
@@ -9,6 +10,8 @@ const {
 	subtitle = await Astro.slots.render('subtitle'),
 	tagline = await Astro.slots.render('tagline'),
 	text = await Astro.slots.render('text'),
+	actions = await Astro.slots.render('actions'),
+
 	items = [],
 	columns = 2,
 
@@ -23,6 +26,7 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
 	<Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
+		
 	<ItemGrid
 		items={items}
 		columns={columns}
@@ -34,6 +38,21 @@ const {
 			...((classes?.items as Record<string, never>) ?? {}),
 		}}
 	/>
+	{
+			actions && (
+			<div class="mt-24 max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row justify-center gap-4 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
+				{Array.isArray(actions) ? (
+				actions.map((action) => (
+					<div class="flex w-full sm:w-auto">
+					<Button {...(action || {})} class="w-full sm:mb-0" />
+					</div>
+				))
+				) : (
+				<Fragment set:html={actions} />
+				)}
+			</div>
+			)
+		}
 	<div class="text-center mt-24">
 		{ text && <div class="max-w-3xl text-sm mx-auto italic text-muted dark:text-slate-400" set:html={text} /> }
 	</div>

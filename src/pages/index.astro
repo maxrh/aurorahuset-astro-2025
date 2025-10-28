@@ -91,7 +91,8 @@ const metadata = {
 	</section>
 
 
-
+	
+	
 	<!-- Om AuroraHuset Features *************** -->
 
 	<Features
@@ -138,6 +139,9 @@ const metadata = {
 			},
 		]}
 		text="Af hensyn til beboernes trivsel og allergier er kæledyr desværre ikke tilladt."
+		actions={[
+			{ text: 'Læs mere', href: '/ophold' },
+		]}
 
 	>
 
@@ -176,71 +180,35 @@ const metadata = {
 		</Fragment>
 	</Features2>
 
-	<!-- Hvad kan du forvente **************** -->
-
-	<Content
-		title="Hvad kan du forvente hos os?"
-		subtitle="I AuroraHuset møder du <strong>omsorgsfuld og professionel støtte</strong> fra erfarne og uddannede socialfaglige medarbejdere, der arbejder ud fra <strong>Traumebevidst Tilgang, Recovery og Responsbaseret Praksis.</strong>"
-		items={[
-			{
-				title: 'Tryghed og ro til at finde fodfæste – i dit eget tempo',
-				description: 'AuroraHuset tilbyder et roligt og trygt miljø, hvor du kan få den støtte og tid, du behøver for at finde fodfæste og begynde på ny – helt i dit eget tempo og med respekt for dine behov.',
-			},
-			{
-				title: 'Støtte og rådgivning i forhold til din aktuelle situation',
-				description: 'Du får omsorgsfuld og professionel støtte fra erfarne socialfaglige medarbejdere, som vejleder og rådgiver ud fra din personlige livssituation, så du kan træffe de rigtige beslutninger for dig og dine børn.',
-			},
-			{
-				title: 'Fællesskab med andre kvinder i lignende livssituationer',
-				description: 'AuroraHuset tilbyder et fællesskab med andre kvinder, der har oplevet lignende udfordringer, hvor der er plads til både nærvær og privatliv – og hvor solidaritet og gensidig respekt er i centrum.',
-			},
-			{
-				title: 'Hjælp til at skabe overblik over bolig, økonomi og fremtid',
-				description: 'Du får konkret hjælp til boligansøgning, økonomi, myndighedskontakt samt støtte til at skabe struktur for din fremtid, så du får overblik og tryghed omkring de praktiske forhold i livet efter volden.',
-			},
-			{
-				title: 'Respekt for dine valg, grænser og ønsker for dit liv',
-				description: 'Hos AuroraHuset mødes du med respekt, tillid og forståelse for dine valg, grænser og ønsker – indsatsen tilpasses altid dig, så du styrkes som hovedaktør i dit eget liv og kan tage skridt mod selvbestemmelse og varige løsninger.',
-			},
-		]}
-			image={{
-			src: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1887',
-			alt: 'Støttende hænder',
-		}}
-	>
-		<Fragment slot="content">
-			<h3 class="text-2xl font-bold tracking-tight dark:text-stone-50 sm:text-3xl mb-2">Du kan forvente:</h3>
-		</Fragment>
-
-		<Fragment slot="bg">
-			<div class="absolute inset-0 border-b"></div>
-		</Fragment>
-	</Content>
 
 	<!-- Vores arbejde - Værdigrundlag **************** -->
 
 	<Content
 		isReversed
 		id="vores-arbejde"
-		tagline="Vores arbejde"
-		title="Faglig og værdibaseret"
-		subtitle={`"Al sand hjælp begynder med en ydmygelse. Hjælperen må først ydmyge sig under den, han vil hjælpe… det at hjælpe er ikke at herske, men at tjene." — Søren Kierkegaard`}
+		tagline="Om Opholdet"
+		title="Vi tilbyder et trygt og respektfuldt ophold, med ro og støtte genfinde styrken"
+		subtitle="Aurorahuset er for kvinder, der er udsat for vold – psykisk, fysisk, seksuel, økonomisk eller i form af social kontrol. Vi tilbyder et trygt og respektfuldt ophold, hvor du kan få ro, støtte og tid til at genfinde styrken til at leve et liv uden vold."
 		items={[
 			{
-				title: 'Traumebevidst tilgang',
-				description: 'Vi forstår hvordan vold og overgreb påvirker mennesker og tilrettelægger vores arbejde med fokus på tryghed og stabilitet.',
+				title: 'Tryghed og ro til at finde fodfæste – i dit eget tempo',
+				description: 'AuroraHuset tilbyder et roligt og trygt miljø, hvor du kan få den støtte og tid, du behøver for at finde fodfæste og begynde på ny.',
 			},
 			{
-				title: 'Recovery-orienteret',
-				description: 'Vi tager afsæt i den enkeltes ønsker, mål og ressourcer og arbejder med håb som drivkraft for forandring.',
+				title: 'Støtte og rådgivning i forhold til din aktuelle situation',
+				description: 'Du får omsorgsfuld og professionel støtte fra erfarne socialfaglige medarbejdere, som vejleder og rådgiver ud fra din personlige livssituation.',
 			},
 			{
-				title: 'Responsbaseret praksis',
-				description: 'Vi anerkender og styrker kvinders modstandsstrategier og handlekraft fremfor at fokusere på mangler.',
+				title: 'Fællesskab med andre kvinder i lignende livssituationer',
+				description: 'AuroraHuset tilbyder et fællesskab med andre kvinder, der har oplevet lignende udfordringer, hvor der er plads til både nærvær og privatliv.',
 			},
 			{
-				title: 'Respekt og ligeværdighed',
-				description: 'Vi møder alle med respekt, støtte og tryghed – og ser styrker frem for fejl hos kvinder og børn.',
+				title: 'Hjælp til at skabe overblik over bolig, økonomi og fremtid',
+				description: 'Du får konkret hjælp til boligansøgning, økonomi, myndighedskontakt samt støtte til at skabe struktur for din fremtid, så du får overblik og tryghed omkring de praktiske forhold i livet.',
+			},
+			{
+				title: 'Respekt for dine valg, grænser og ønsker for dit liv',
+				description: 'Hos AuroraHuset mødes du med respekt, tillid og forståelse for dine valg, grænser og ønsker – indsatsen tilpasses altid dig, så du styrkes som hovedaktør i dit eget liv.',
 			},
 		]}
 		image={{
@@ -250,7 +218,7 @@ const metadata = {
 	>
 		<Fragment slot="content">
 			<h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-			Vi arbejder for at bringe håb og omsorg til kvinder og børn, styrke forældreskab og forebygge vold</h3>
+			Du kan forvente:</h3>
 		</Fragment>
 
 		<Fragment slot="bg">
@@ -261,37 +229,37 @@ const metadata = {
 	<!-- Steps Widget - Behandlingsforløb ****************** -->
 
 	<Steps
-		title="Vores 5 faser i behandlingsforløbet"
-		subtitle="Et struktureret forløb der støtter dig gennem din rejse mod helbredelse"
+		title="Opholdets faser og indsatser"
+		subtitle="Opholdet tilpasses altid den enkelte kvinde og eventuelle børn og organiseres i fem faser."
 		items={[
 			{
-				title: 'Fase 1: <span class="font-medium">Stabilisering</span>',
+				title: 'Fase 1: <span class="font-medium">Henvendelse og visitation</span>',
 				description:
-				'Her fokuserer vi på at skabe tryghed og stabilitet. Vi hjælper med basale behov, etablerer daglige rutiner og arbejder med følelsesregulering.',
+				'Afklaring af målgruppe og behov - Screening og eventuel indskrivning - Indsamling af oplysninger til senere opfølgning',
 				icon: 'tabler:shield-check',
 			},
 			{
-				title: 'Fase 2: <span class="font-medium">Integrering af traumeerfaringer</span>',
+				title: 'Fase 2: <span class="font-medium">Optagelse og afklaring</span>',
 				description:
-				'I denne fase arbejder vi med at bearbejde traumatiske oplevelser på en tryg måde, så de kan integreres i dit livs historie.',
+				'Afdækning af voldens karakter og støttebehov - Introduktion til husets rammer og rettigheder - Råd og vejledning',
 				icon: 'tabler:heart',
 			},
 			{
-				title: 'Fase 3: <span class="font-medium">Relationsskabelse</span>',
+				title: 'Fase 3: <span class="font-medium">Ro og stabilisering</span>',
 				description:
-				'Vi fokuserer på at genopbygge tillid og skabe sunde relationer til andre mennesker og samfundet omkring dig.',
+				'Krisehjælp, støtte og tryghed - Hjælp til at skabe struktur og tillid - Støtte til at genfinde ro i krop og sind',
 				icon: 'tabler:users',
 			},
 			{
-				title: 'Fase 4: <span class="font-medium">Personlig udvikling</span>',
+				title: 'Fase 4: <span class="font-medium">Ophold og støtte</span>',
 				description:
-				'Her arbejder vi med at styrke din identitet, selvværd og personlige mål for fremtiden.',
+				'Indsatserne kan omfatte: Forældrerolle, Uddannelse og beskæftigelse, Netværk og relationer, Hverdag, Administration, Støtte til børn ',
 				icon: 'tabler:plant',
 			},
 			{
-				title: 'Fase 5: <span class="font-medium">Forberedelse til et selvstændigt liv</span>',
+				title: 'Fase 5: <span class="font-medium">Udslusning og efterværn</span>',
 				description:
-				'Vi hjælper med at udvikle praktiske færdigheder og støtter overgangen til et selvstændigt liv uden for krisecenteret.',
+				'Forberedelse til flytning og koordinering med kommune - Hjælp til bolig og økonomi - Efterværn, rådgivning og netværksaktiviteter',
 				icon: 'tabler:home',
 			},
 		]}
