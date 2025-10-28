@@ -3,20 +3,42 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Har du brug for hjælp?',
-      href: '#hjaelp',
+      text: 'Brug for hjælp?',
+      href: getPermalink('/#hjaelp'),
     },
     {
-      text: 'Om AuroraHuset',
-      href: '#opholdet',
+      text: 'AuroraHuset',
+      href: getPermalink('/#opholdet'),
     },
     {
-      text: 'Vores arbejde',
-      href: '#vores-arbejde',
+      text: 'Opholdet',
+      href: getPermalink('/#opholdet'),
     },
+  
     {
-      text: 'Støt & Samarbejde',
-      href: '#stoet',
+      text: 'Mere',
+      links: [
+        {
+          text: 'Om AuroraHuset',
+          href: getPermalink('/om-aurorahuset'),
+        },
+        {
+          text: 'Ophold hos AuroraHuset',
+          href: getPermalink('/ophold'),
+        },
+        {
+          text: 'Tilgang & Metoder',
+          href: getPermalink('/homes/mobile-app'),
+        },
+        {
+          text: 'Støt & Samarbejde',
+          href: getPermalink('/homes/personal'),
+        },
+        {
+          text: 'Job hos AuroraHuset',
+          href: getPermalink('/homes/personal'),
+        },
+      ],
     },
     
   ],
