@@ -13,6 +13,7 @@ export default {
         contrast: 'rgb(var(--aw-color-contrast) / <alpha-value>)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
+        page: 'rgb(var(--aw-color-bg-page) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
