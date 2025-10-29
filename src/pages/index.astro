@@ -7,6 +7,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import Brands from '~/components/widgets/Brands.astro';
 
 
 const metadata = {
@@ -33,7 +34,7 @@ const metadata = {
 				href: 'tel:53716100',
 				icon: 'tabler:phone',
 			},
-			{ text: 'Læs mere', href: '#hjaelp' },
+			{ text: 'Læs mere', href: '#om-aurorahuset' },
 		]}
 	>
 		<Fragment slot="title">
@@ -94,7 +95,7 @@ const metadata = {
 	<!-- Om AuroraHuset Features *************** -->
 
 	<Features
-		id="opholdet"
+		id="om-aurorahuset"
 		tagline="Om AuroraHuset"
 		title="AuroraHuset er et krisecenter med plads til 8 kvinder og deres børn"
 		subtitle="Vi skaber et <strong>roligt og trygt miljø</strong>, hvor du kan få den støtte og tid, du behøver til at finde fodfæste og begynde på ny. Hos os får du:"
@@ -138,13 +139,11 @@ const metadata = {
 		]}
 		text="Af hensyn til beboernes trivsel og allergier er kæledyr desværre ikke tilladt."
 		actions={[
-			{ text: 'Læs mere', href: '/ophold' },
+			{ text: 'Læs mere', href: '/om-aurorahuset' },
 		]}
-
 	>
-
 		<Fragment slot="bg">
-			<div class="absolute inset-0 border-b"></div>
+			<div class="absolute inset-0 "></div>
 		</Fragment>
 	</Features>
 
@@ -171,6 +170,9 @@ const metadata = {
 			},
 		]}
 		text="Da der bor børn i huset, kan vi desværre ikke tilbyde ophold til kvinder med aktivt stof- eller alkoholbrug eller ubehandlede, alvorlige psykiatriske lidelser. Dette er for at beskytte både kvinders og børns trivsel – og sikre, at alle kan føle sig trygge."
+		actions={[
+			{ text: 'Læs mere', href: '/om-aurorahuset' },
+		]}
 	>
 
 		<Fragment slot="bg">
@@ -182,8 +184,8 @@ const metadata = {
 	<!-- Vores arbejde - Værdigrundlag **************** -->
 
 	<Content
-	isReversed
-		id="vores-arbejde"
+		isReversed
+		id="om-opholdet"
 		tagline="Om Opholdet"
 		title="Vi tilbyder et trygt og respektfuldt ophold, med ro og støtte genfinde styrken"
 		subtitle="Aurorahuset er for kvinder, der er udsat for vold – psykisk, fysisk, seksuel, økonomisk eller i form af social kontrol. Vi tilbyder et trygt og respektfuldt ophold, hvor du kan få ro, støtte og tid til at genfinde styrken til at leve et liv uden vold."
@@ -226,7 +228,7 @@ const metadata = {
 		</Fragment>
 
 		<Fragment slot="bg">
-			<div class="absolute inset-0 border-b"></div>
+			<div class="absolute inset-0"></div>
 		</Fragment>
 	</Content>
 
@@ -299,7 +301,7 @@ const metadata = {
 		}}
 		actions={[{
 			text: 'Læs mere',
-			href: '#jobs',
+			href: '/ophold',
 			variant: 'secondary',
 			icon: ''
 		}]}
@@ -311,9 +313,10 @@ const metadata = {
 
 
 	<Features2
+		tagline="Støt & samarbejde"
 		title="Donationer"
 		subtitle="Vi er taknemmelige for al den støtte, vi modtager – økonomisk, praktisk og menneskelig. Donationer hjælper os med at skabe trygge, stabile og udviklende rammer for kvinder og børn, der har levet med vold."
-		id="stoet"
+		id="stoet-samarbejde"
 		columns={3}
 		items={[
 			{
@@ -334,15 +337,44 @@ const metadata = {
 			},
 		]}
 		text="Da Aurorahuset drives af Aurora Women ApS, er donationer ikke fradragsberettigede, men vi garanterer, at alle bidrag anvendes til beboernes trivsel."
-		actions={[
-			{ text: 'Læs mere', href: '/ophold' },
+		actions={[{
+			text: 'Læs mere',
+			href: '/donationer',
+			variant: 'secondary',
+			icon: ''
+		}]}
+	>
+
+		<Fragment slot="bg">
+			<div class="absolute inset-0"></div>
+		</Fragment>
+	</Features2>
+
+	<!-- Samarbejde -->
+
+	<Brands
+		id="samarbejde"
+		tagline=""
+		title="Samarbejde"
+		subtitle="AuroraHuset samarbejder med kommuner, myndigheder, og civilsamfundsaktører for at sikre en helhedsorienteret indsats for kvinder og børn. Vi deltager aktivt i faglige netværk, bl.a. gennem DI Sundhed & Velfærd, og indgår i partnerskaber, der fremmer tryghed, udvikling og et liv uden vold."
+		icons={[]}
+		images={[
+			{ src: 'https://res.cloudinary.com/maxrh/image/upload/ar_2:1,c_pad/AuroraHuset/3_DI-logo_Sort_mger1g', alt: 'Brand 2' },
+			{ src: 'https://res.cloudinary.com/maxrh/image/upload/ar_2:1,c_pad/AuroraHuset/3_DI-logo_Sort_mger1g', alt: 'Brand 3' },
+			{ src: 'https://res.cloudinary.com/maxrh/image/upload/ar_2:1,c_pad/AuroraHuset/3_DI-logo_Sort_mger1g', alt: 'Brand 4' },
 		]}
+		actions={[{
+			text: 'Læs mere',
+			href: '/samarbejde',
+			variant: 'secondary',
+			icon: ''
+		}]}
 	>
 
 		<Fragment slot="bg">
 			<div class="absolute inset-0 border-b"></div>
 		</Fragment>
-	</Features2>
+	</Brands>
 
 
 	<!-- Job i AuroraHuset -->
@@ -353,9 +385,12 @@ const metadata = {
 		tagline=""
 		title="Job hos AuroraHuset"
 		subtitle="I Aurorahuset søger vi medarbejdere, der med faglighed, empati og ansvarlighed vil være med til at skabe trygge rammer og en ny begyndelse for kvinder og børn, der har levet med vold."
-		actions={[
-			{ text: 'Læs mere', href: '/ophold' },
-		]}
+		actions={[{
+			text: 'Læs mere',
+			href: '/job',
+			variant: 'secondary',
+			icon: ''
+		}]}
 	>
 
 		<Fragment slot="bg">
