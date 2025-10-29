@@ -240,6 +240,7 @@ export interface Testimonials extends Omit<Headline, 'classes'>, Widget {
 export interface Brands extends Omit<Headline, 'classes'>, Widget {
   icons?: Array<string>;
   images?: Array<Image>;
+  actions?: string | CallToAction | CallToAction[];
 }
 
 export interface Features extends Omit<Headline, 'classes'>, Widget {
@@ -254,7 +255,7 @@ export interface Features extends Omit<Headline, 'classes'>, Widget {
   isBeforeContent?: boolean;
   isAfterContent?: boolean;
   text?: string;
-  actions?: string | CallToAction[];
+  actions?: string | CallToAction | CallToAction[];
 }
 
 export interface Faqs extends Omit<Headline, 'classes'>, Widget {

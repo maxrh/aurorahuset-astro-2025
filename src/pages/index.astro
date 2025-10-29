@@ -7,6 +7,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import Brands from '~/components/widgets/Brands.astro';
 
 
 const metadata = {
@@ -311,6 +312,7 @@ const metadata = {
 
 
 	<Features2
+		tagline="Støt & samarbejde"
 		title="Donationer"
 		subtitle="Vi er taknemmelige for al den støtte, vi modtager – økonomisk, praktisk og menneskelig. Donationer hjælper os med at skabe trygge, stabile og udviklende rammer for kvinder og børn, der har levet med vold."
 		id="stoet"
@@ -343,6 +345,24 @@ const metadata = {
 			<div class="absolute inset-0 border-b"></div>
 		</Fragment>
 	</Features2>
+
+	<!-- Samarbejde -->
+
+	<Brands
+		id="samarbejde"
+		tagline=""
+		title="Samarbejde"
+		subtitle="AuroraHuset samarbejder med kommuner, myndigheder, og civilsamfundsaktører for at sikre en helhedsorienteret indsats for kvinder og børn. Vi deltager aktivt i faglige netværk, bl.a. gennem DI Sundhed & Velfærd, og indgår i partnerskaber, der fremmer tryghed, udvikling og et liv uden vold."
+		icons={[]}
+		images={[
+			{ src: 'https://res.cloudinary.com/maxrh/image/upload/ar_2:1,c_pad/AuroraHuset/3_DI-logo_Sort_mger1g', alt: 'Brand 2' },
+			{ src: 'https://res.cloudinary.com/maxrh/image/upload/ar_2:1,c_pad/AuroraHuset/3_DI-logo_Sort_mger1g', alt: 'Brand 3' },
+			{ src: 'https://res.cloudinary.com/maxrh/image/upload/ar_2:1,c_pad/AuroraHuset/3_DI-logo_Sort_mger1g', alt: 'Brand 4' },
+		]}
+		actions={[
+			{ text: 'Læs mere', href: '/ophold' },
+		]}
+	/>
 
 
 	<!-- Job i AuroraHuset -->

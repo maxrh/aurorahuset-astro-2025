@@ -5,16 +5,20 @@ import type { Brands as Props } from '~/types';
 import Image from '~/components/common/Image.astro';
 import Headline from '~/components/ui/Headline.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Button from '~/components/ui/Button.astro';
+
 const {
-  title = '',
-  subtitle = '',
-  tagline = '',
-  icons = [],
-  images = [],
-  id,
-  isDark = false,
-  classes = {},
-  bg = await Astro.slots.render('bg'),
+	title = '',
+	subtitle = '',
+	tagline = '',
+	icons = [],
+	images = [],
+	actions = await Astro.slots.render('actions'),
+
+	id,
+	isDark = false,
+	classes = {},
+	bg = await Astro.slots.render('bg'),
 } = Astro.props;
 ---
 
@@ -29,10 +33,25 @@ const {
           (image) =>
             image.src && (
               <div class="flex justify-center col-span-1 my-2 lg:my-4 py-1 px-3 rounded-md dark:bg-gray-200">
-                <Image src={image.src} alt={image.alt || ''} class="max-h-12" width={120} height={48} layout="fixed" />
+                <Image src={image.src} alt={image.alt || ''} class="max-h-15" width={150} height={60} layout="fixed" />
               </div>
             )
         )
     }
   </div>
+	{
+		actions && (
+			<div class="mt-24 flex flex-nowrap flex-col sm:flex-row gap-4 justify-center">
+				{Array.isArray(actions) ? (
+					actions.map((action) => (
+						<div class="flex w-full sm:w-auto">
+							<Button {...(action || {})} class="w-full sm:mb-0" />
+						</div>
+					))
+				) : (
+					<Fragment set:html={actions} />
+				)}
+			</div>
+		)
+	}
 </WidgetWrapper>
