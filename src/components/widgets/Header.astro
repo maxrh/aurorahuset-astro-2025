@@ -116,7 +116,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 					) : (
 						<a
 							class:list={[
-								'hover:text-link dark:hover:text-page px-4 py-3 flex items-center whitespace-nowrap',
+								'hover:text-link dark:hover:text-page px-4 py-2 flex items-center ease-in duration-200 whitespace-nowrap',
 								{ 'aw-link-active': href === currentPath },
 							]}
 							href={href}
@@ -135,8 +135,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 				'hidden lg:self-center lg:flex items-center lg:mb-0 fixed w-full lg:w-auto lg:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 lg:p-0 lg:justify-self-end',
 			]}
 		>
-			<div class="items-center flex justify-between w-full lg:w-auto">
-				<div class="flex">
+			<div class="items-center flex justify-between w-full lg:w-auto h-12">
+				<div class="flex items-center h-full">
 				{showToggleTheme && <ToggleTheme iconClass="w-6 h-6 lg:w-5 lg:h-5 lg:inline-block" />}
 				{
 					showRssFeed && (
@@ -154,7 +154,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 					actions?.length ? (
 						<span class="ml-4 rtl:ml-0 rtl:mr-4">
 							{actions.map((btnProps) => (
-								<Button {...btnProps} class="" />
+								<Button {...btnProps} class="text-xl lg:text-[0.9375rem] leading-[1.375] h-12" />
 							))}
 						</span>
 					) : (

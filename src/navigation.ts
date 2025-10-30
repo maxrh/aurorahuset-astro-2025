@@ -64,6 +64,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
   footNote: `
-    © ${new Date().getFullYear()} Aurora Women ApS · Alle rettigheder forbeholdes · Website af <a class="text-primary font-semibold dark:text-muted" href="https://monsun.dk"> MONSUN</a>
+    © ${new Date().getFullYear()} Aurora Women ApS · Alle rettigheder forbeholdes · Website af <a class="hover:text-primary font-semibold transition duration-200 ease-in-out" href="https://monsun.dk"> MONSUN</a>
   `,
 };

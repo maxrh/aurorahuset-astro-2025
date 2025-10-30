@@ -4,9 +4,11 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
 
@@ -42,7 +44,7 @@ const metadata = {
 
 	<!-- Akut hjælp section ******************* -->
 
-	<CallToAction
+	<!-- <CallToAction
 		id="hjaelp"
 		title="Har du brug for hjælp?"
 		subtitle="Hvis du har brug for at komme væk fra volden – eller har brug for råd og vejledning – så kontakt os:"
@@ -63,25 +65,56 @@ const metadata = {
 		]}
 	>
 		<Fragment slot="bg">
-			<div class="absolute inset-0 bg-contrast"></div>
+			<div class="absolute inset-0 bg-primary/5"></div>
 		</Fragment>
-	</CallToAction>
+	</CallToAction> -->
 
-	<section class="border-b not-prose">
-		<div class="bg-page rounded-xl p-14 max-w-5xl mx-auto lg:flex lg:gap-20">
-			<div class="basis-1/2 text-lg space-y-1 mb-6 lg:mb-0">
-				<p><strong>Døgnåben vagttelefon:</strong> 53 71 46 88</p>
-				<p><strong>Rådgivning (alle dage kl. 10–17):</strong> Samme nummer</p>
-				<p><strong>Mail:</strong> info@kcaurora.dk</p>
-			</div>
-			<div class="basis-1/2">
-				<p class="text-lg">Er du i tvivl, om du er udsat for vold? Så er du også velkommen til at ringe. <strong>Vi er her for dig.</strong></p>
-			</div>
+	<!-- Kontaktinfo section ******************* -->
+
+	<Steps2
+		isReversed
+		id="hjaelp"
+		title="Har du brug for hjælp?"
+		subtitle="Hvis du har brug for at komme væk fra volden – eller har brug for råd og vejledning – så kontakt os. Er du i tvivl, om du er udsat for vold? Så er du også velkommen til at ringe. Vi er her for dig."
+		actions={[
+			{
+				variant: 'primary',
+				text: 'Ring 53 71 46 88',
+				href: 'tel:53714688',
+				icon: 'tabler:message-circle-exclamation',
+			},
+			{
+				text: 'Ring 112 ved akut fare',
+				href: 'tel:112',
+				variant: 'secondary',
+				icon: 'tabler:alert-triangle',
+			},
 			
-		</div>
-	</section>
-
-
+		]}
+		items={[
+			{
+				title: 'Døgnåben vagttelefon:',
+				description: '( + 45 ) 53 71 46 88',
+				icon: 'tabler:message-circle-exclamation',
+			},
+			{
+				title: 'Rådgivning (alle dage kl. 10–17):',
+				description: '( + 45 ) 53 71 46 88',
+				icon: 'tabler:message-circle-heart',
+			},
+			{
+				title: 'Skriv til os:',
+				description: 'info@kcaurora.dk',
+				icon: 'tabler:mail-exclamation',
+			},
+			
+			
+		]}
+	>
+		<Fragment slot="bg">
+			<div class="absolute inset-0 bg-red-800/5"></div>
+		</Fragment>
+	</Steps2>
 	
 	
 	<!-- Om AuroraHuset Features *************** -->
@@ -130,7 +163,9 @@ const metadata = {
 			},
 		]}
 		text="Af hensyn til beboernes trivsel og allergier er kæledyr desværre ikke tilladt."
-		
+		actions={[
+			{ text: 'Læs mere', href: '/om-aurorahuset' },
+		]}
 	>
 		<Fragment slot="bg">
 			<div class="absolute inset-0 "></div>
@@ -174,7 +209,7 @@ const metadata = {
 	<!-- Vores arbejde - Værdigrundlag **************** -->
 
 	<Content
-		isReversed
+		
 		id="om-opholdet"
 		tagline="Om Opholdet"
 		title="Vi tilbyder et trygt og respektfuldt ophold, med ro og støtte genfinde styrken"
@@ -182,29 +217,35 @@ const metadata = {
 		items={[
 			{
 				title: 'Tryghed og ro til at finde fodfæste – i dit eget tempo',
-				description: '',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 			},
 			{
 				title: 'Støtte og rådgivning i forhold til din aktuelle situation',
-				description: '',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 			},
 			{
 				title: 'Fællesskab med andre kvinder i lignende livssituationer',
-				description: '',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 			},
 			{
 				title: 'Hjælp til at skabe overblik over bolig, økonomi og fremtid',
-				description: '',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 			},
 			{
 				title: 'Respekt for dine valg, grænser og ønsker for dit liv',
-				description: '',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 			},
 		]}
 		image={{
-			src: 'https://images.unsplash.com/photo-1638062416317-ea9a015b5988?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764',
+			src: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1587',
 			alt: 'Omsorgsfulde hænder',
 		}}
+		actions={[{
+			text: 'Læs mere',
+			href: '/ophold',
+			variant: 'secondary',
+			icon: ''
+		}]}
 	>
 		<Fragment slot="content">
 			<h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
@@ -219,7 +260,7 @@ const metadata = {
 	<!-- Steps Widget - Behandlingsforløb ****************** -->
 
 	<Steps
-		
+		isReversed
 		tagline=""
 		title="Opholdets faser & indsatser"
 		subtitle="Opholdet tilpasses altid den enkelte kvinde og eventuelle børn og organiseres i fem faser."
