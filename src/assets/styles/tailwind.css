@@ -15,41 +15,39 @@
 	.text-muted-dark {
 		color: var(--aw-color-text-muted-dark);
 	}
+	.text-light {
+		color: rgb(var(--aw-color-light));
+	}
+	.text-dark {
+		color: rgb(var(--aw-color-dark));
+	}
 }
 
 @layer components {
-  .btn {
-    @apply inline-flex items-center justify-center rounded-full border-primary/20 border bg-transparent font-semibold text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-primary/20 focus:ring-offset-stone-50 focus:ring-2 focus:ring-offset-2 hover:border-primary/70 dark:text-stone-300 dark:border-primary/30 dark:hover:bg-slate-800 dark:hover:border-slate-800 cursor-pointer;
-  }
+	.btn {
+		@apply inline-flex items-center justify-center rounded-full border-primary/30 border bg-transparent font-medium text-center text-base text-inherit leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-primary/20 focus:ring-offset-stone-50 focus:ring-2 focus:ring-offset-2 hover:border-primary/70  cursor-pointer;
+	}
 
-  .btn-primary {
-    @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
-  }
+	.btn-primary {
+		@apply btn font-semibold bg-primary text-light border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-light dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+	}
 
-  .btn-primary-inverse {
-    @apply btn font-semibold bg-stone-50 text-primary border-stone-50 hover:bg-stone-200 hover:border-stone-200 hover:text-secondary dark:text-primary dark:bg-transparent dark:border-primary dark:hover:bg-primary dark:hover:text-white;
-  }
+	.btn-secondary {
+		@apply btn;
+	}
 
-  .btn-secondary {
-    @apply btn;
-  }
-
-  .btn-secondary-inverse {
-    @apply btn text-stone-50 border-primary/30 hover:bg-transparent hover:border-primary/60 dark:text-contrast dark:hover:bg-transparent dark:hover:border-primary/60;
-  }
-
-  .btn-tertiary {
-    @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
-  }
+	.btn-tertiary {
+		@apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
+	}
 }
 
 #header.scroll > div:first-child {
-  @apply bg-page md:bg-page/90 md:backdrop-blur-md;
+  @apply bg-page md:bg-page md:backdrop-blur-md;
   box-shadow: 0 0.375rem 1.5rem 0 rgb(140 152 164 / 13%);
 }
 .dark #header.scroll > div:first-child,
 #header.scroll.dark > div:first-child {
-  @apply bg-page md:bg-contrast/90 md:backdrop-blur-md;
+  @apply bg-page md:bg-page md:backdrop-blur-md;
   box-shadow: 0 0.375rem 1.5rem 0 rgb(0 0 0 / 30%);
 }
 /* #header.scroll > div:last-child {
