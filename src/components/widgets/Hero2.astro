@@ -29,18 +29,18 @@ const {
 		<div class="py-20 lg:flex lg:items-center lg:gap-8">
 			<div class="basis-1/2 text-center lg:text-left pb-10 lg:pb-0 mx-auto">
 				{
-				tagline && (
-					<p
-					class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
-					set:html={tagline}
-					/>
-				)
+					tagline && (
+						<p
+							class="text-base text-secondary font-bold tracking-wide uppercase intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
+							set:html={tagline}
+						/>
+					)
 				}
 				{
 				title && (
 					<h1
-					class="text-5xl md:text-7xl font-extrabold tracking-tight font-heading dark:text-stone-100 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
-					set:html={title}
+						class="text-5xl md:text-7xl font-extrabold tracking-tight font-heading intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
+						set:html={title}
 					/>
 				)
 				}
@@ -48,7 +48,7 @@ const {
 				{
 					subtitle && (
 					<p
-						class="text-xl text-muted dark:text-stone-300 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
+						class="text-xl text-muted intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
 						set:html={subtitle}
 					/>
 					)
