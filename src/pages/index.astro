@@ -21,6 +21,9 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
 	<Hero2
+		tagline=''
+		title='Velkommen til AuroraHuset'
+		subtitle="Et trygt og fagligt funderet krisecenter for kvinder, der har været udsat for vold, trusler, social kontrol eller anden form for overgreb. Hos os bliver du mødt med respekt, tillid og støtte – uanset din situation."
 		image={`
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1920" class="fill-[#2e2436] dark:fill-rose-300 w-full h-auto mx-auto max-w-lg">
 				<path d="M721.6 769.7c1.2 0 2.2-1 2.2-2.2s-1-2.2-2.2-2.2c-11.5 0-25.7 0-39.9-2.6 2.4-3.9 4.5-7.8 6.1-11.6.5-1.1 0-2.4-1.2-2.8-1.1-.5-2.4 0-2.8 1.2-1.8 4.4-4.3 8.9-7.2 13.4-.1.1-.2.3-.3.4-15 22.7-42.3 44.7-63 53.6-23.1 9.9-50.7 14.6-84.3 14.3h-2.2c-9.6-.1-19.5-.2-28.6 3.5-1.1.5-1.6 1.7-1.2 2.8.5 1.1 1.7 1.6 2.8 1.2 7-2.9 14.8-3.3 22.7-3.2-1.9 15.7-6.5 30.8-13.6 44.9-.5 1.1-.1 2.4.9 2.9.3.2.6.2 1 .2.8 0 1.6-.4 1.9-1.2 7.4-14.6 12.1-30.2 14.1-46.4v-.6h2.2c7.5 0 14.7-.1 21.6-.6-.1.3-.2.6-.2.9.5 12.5-2.2 26.8-7.1 38.3-.5 1.1 0 2.4 1.1 2.8 1.1.5 2.4 0 2.8-1.1 5.1-12.1 7.9-27.1 7.4-40.2 0-.4-.1-.7-.3-1 7.3-.6 14.3-1.4 21.1-2.5a315 315 0 0 1-3.2 44.5c-.2 1.2.7 2.3 1.8 2.4 1.2.2 2.3-.7 2.4-1.8 2.2-15.2 3.3-30.6 3.3-45.9 9.4-1.8 18.1-4.1 26.4-7.1 3 12.5 4.5 25.3 4.2 38.1 0 1.2.9 2.2 2.1 2.2s2.1-.9 2.2-2.1c.2-13.3-1.2-26.6-4.4-39.5v-.2c1.6-.6 3.2-1.3 4.7-1.9 4.3-1.8 8.8-4.2 13.5-7 7.6 9.4 16.2 22.3 21.8 32.9.6 1.1 1.9 1.5 2.9.9 1.1-.6 1.5-1.9.9-2.9-5.7-10.7-14.3-23.6-22-33.2 4.2-2.7 8.5-5.8 12.7-9.1 6.3 3.3 14.1 6.9 21.7 10.3 7.6 3.5 15.4 7.1 21.7 10.3 1.1.6 2.4.1 2.9-.9.5-1.1.1-2.4-.9-2.9-6.4-3.3-14.3-6.9-21.9-10.4-6.8-3.1-13.9-6.4-19.8-9.4 5.7-4.7 11.3-9.9 16.5-15.4.1 0 .2 0 .3.1l46 12.8c1.2.3 2.3-.4 2.7-1.5s-.4-2.3-1.5-2.7l-44.2-12.3c4-4.5 7.7-9.2 10.9-13.9 15.2 3 30.3 3 42.4 3Z"/>
@@ -28,24 +31,14 @@ const metadata = {
 			</svg>
 		`}
 		actions={[
+			
 			{
-				variant: 'primary',
-				text: 'Ring 53 71 61 00',
-				href: 'tel:53716100',
-				icon: 'tabler:phone',
+				text: 'Læs mere',
+				href: '#om-aurorahuset',
+				icon: 'tabler:arrow-down-dashed',
 			},
-			{ text: 'Læs mere', href: '#om-aurorahuset' },
 		]}
-	>
-		<Fragment slot="title">
-			Velkommen til AuroraHuset
-		</Fragment>
-
-		<Fragment slot="subtitle">
-			Et trygt og fagligt funderet krisecenter for kvinder, der har været udsat for vold, trusler, social kontrol eller anden form for overgreb.
-			<br /><br />Vi arbejder med Traumebevidst Tilgang (TBT), Recovery og Responsbaseret Praksis (RBP). Hos os bliver du mødt med respekt, tillid og støtte – uanset din situation.
-		</Fragment>
-	</Hero2>
+	/>
 
 	<!-- Akut hjælp section ******************* -->
 
@@ -56,21 +49,21 @@ const metadata = {
 		actions={[
 			{
 				variant: 'primary',
-				text: 'Ring nu: 53 71 46 88 ',
+				text: 'Ring 53 71 46 88',
 				href: 'tel:53714688',
-				icon: 'tabler:phone',
+				icon: 'tabler:message-circle-heart',
 			},
 			{
 				text: 'Ring 112 ved akut fare',
 				href: 'tel:112',
-				variant: 'secondaryInverse',
-				icon: 'tabler:phone',
+				variant: 'secondary',
+				icon: 'tabler:message-circle-exclamation',
 			},
 			
 		]}
 	>
 		<Fragment slot="bg">
-			<div class="absolute inset-0 bg-contrast dark:bg-stone-50"></div>
+			<div class="absolute inset-0 bg-contrast"></div>
 		</Fragment>
 	</CallToAction>
 

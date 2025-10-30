@@ -22,7 +22,7 @@ export const headerData = {
     
     
   ],
-  actions: [{ text: 'Forlad side', href: 'https://dr.dk', target: '_parent', icon: 'tabler:arrow-right-dashed' }],
+  actions: [{ text: 'Forlad side', href: 'https://dr.dk', target: '_parent', icon: 'tabler:arrow-right-dashed', variant: 'primary' }],
 };
 
 export const footerData = {
