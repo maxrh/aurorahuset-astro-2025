@@ -5,37 +5,38 @@ import Button from '~/components/ui/Button.astro';
 import type { Hero as Props } from '~/types';
 
 const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
-  tagline,
+	title = await Astro.slots.render('title'),
+	subtitle = await Astro.slots.render('subtitle'),
+	tagline,
 
-  content = await Astro.slots.render('content'),
-  actions = await Astro.slots.render('actions'),
-  image = await Astro.slots.render('image'),
-
-  id,
-  bg = await Astro.slots.render('bg'),
+	content = await Astro.slots.render('content'),
+	actions = await Astro.slots.render('actions'),
+	image = await Astro.slots.render('image'),
+	vacancies = await Astro.slots.render('vacancies'),
+	id,
+	bg = await Astro.slots.render('bg'),
 } = Astro.props;
 ---
 
-<section class="relative lg:-mt-[76px] 2xl:-mt-[96px] not-prose" {...id ? { id } : {}}>
+<section class="relative lg:-mt-[80px] 2xl:-mt-[90px] not-prose" {...id ? { id } : {}}>
 	<div class="absolute inset-0 pointer-events-none" aria-hidden="true">
 		<slot name="bg">
-		{bg ? <Fragment set:html={bg} /> : null}
+			{bg ? <Fragment set:html={bg} /> : null}
 		</slot>
 	</div>
-	<div class="relative max-w-7xl mx-auto px-4 sm:px-10">
-		<div class="pt-0 lg:pt-[76px] 2xl:pt-[96px] pointer-events-none"></div>
-		<div class="py-20 lg:flex lg:items-center lg:gap-8">
+	<div class="relative max-w-7xl mx-auto px-4 sm:px-10  ">
+		<div class="pt-0 lg:pt-[80px] 2xl:pt-[90px] pointer-events-none"></div>
+		<div class="py-12 lg:pt-0 lg:pb-6 lg:min-h-[calc(100vh-80px)] 2xl:lg:min-h-[calc(100vh-90px)] lg:flex lg:items-center lg:gap-8">
 			<div class="basis-1/2 text-center lg:text-left pb-10 lg:pb-0 mx-auto">
 				{
 					tagline && (
 						<p
-							class="text-base text-secondary font-bold tracking-wide uppercase intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
+							class="mb-10 text-base text-secondary font-bold tracking-wide uppercase intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
 							set:html={tagline}
 						/>
 					)
 				}
+				
 				{
 				title && (
 					<h1
@@ -55,16 +56,29 @@ const {
 				}
 
 				{
-					actions && (
-					<div class="mt-16 max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 lg:justify-start lg:max-w-7xl intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
-						{Array.isArray(actions) ? (
+					(actions || vacancies) && (
+					<div class="mt-16 max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-8 lg:justify-start lg:max-w-7xl intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
+						{actions && Array.isArray(actions) ? (
 							actions.map((action) => (
 								<div class="flex w-full sm:w-auto">
 									<Button {...(action || {})} class="w-full" />
 								</div>
 							))
-						) : (
+						) : actions ? (
 							<Fragment set:html={actions} />
+						) : null}
+						
+						{vacancies && (
+							<div class="flex w-full sm:w-auto items-center">
+								<div class="inline-flex items-center">
+									<a href="#hjaelp" class="hover:text-primary font-medium mr-4  ease-in duration-200">
+										Ledige pladser
+									</a>
+									<span class=" text-xl border-2 h-12 aspect-square font-semibold flex items-center justify-center rounded-xl">
+										<Fragment set:html={vacancies} />
+									</span>
+								</div>
+							</div>
 						)}
 					</div>
 					)
@@ -72,7 +86,7 @@ const {
 				</div>
 				{content && <Fragment set:html={content} />}
 			</div>
-			<div class="basis-1/2 pb-10">
+			<div class="basis-1/2">
 				{
 				image && (
 					<div class="relative m-auto max-w-5xl intersect-once intersect-no-queue motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">

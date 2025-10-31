@@ -33,13 +33,13 @@ const metadata = {
 			</svg>
 		`}
 		actions={[
-			
 			{
 				text: 'Læs mere',
 				href: '#om-aurorahuset',
 				icon: 'tabler:arrow-down-dashed',
 			},
 		]}
+		vacancies='3'
 	/>
 
 	<!-- Akut hjælp section ******************* -->
@@ -83,12 +83,7 @@ const metadata = {
 				href: 'tel:53714688',
 				icon: 'tabler:message-circle-exclamation',
 			},
-			{
-				text: 'Ring 112 ved akut fare',
-				href: 'tel:112',
-				variant: 'secondary',
-				icon: 'tabler:alert-triangle',
-			},
+			
 			
 		]}
 		items={[
@@ -105,14 +100,14 @@ const metadata = {
 			{
 				title: 'Skriv til os:',
 				description: 'info@kcaurora.dk',
-				icon: 'tabler:mail-exclamation',
+				icon: 'tabler:mail',
 			},
 			
 			
 		]}
 	>
 		<Fragment slot="bg">
-			<div class="absolute inset-0 bg-red-800/5"></div>
+			<div class="absolute inset-0 bg-contrast dark:bg-primary/20"></div>
 		</Fragment>
 	</Steps2>
 	
@@ -248,7 +243,7 @@ const metadata = {
 		}]}
 	>
 		<Fragment slot="content">
-			<h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+			<h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
 			Du kan forvente:</h3>
 		</Fragment>
 
