@@ -37,6 +37,31 @@ export default {
 				'100%': { opacity: 1, transform: 'translateY(0)' },
 				},
 			},
+			typography: {
+				DEFAULT: {
+					css: {
+						color: 'var(--aw-color-text-default)',
+						h1: {
+							color: 'var(--aw-color-text-heading)',
+						},
+						h2: {
+							color: 'var(--aw-color-text-heading)',
+						},
+						h3: {
+							color: 'var(--aw-color-text-heading)',
+						},
+						h4: {
+							color: 'var(--aw-color-text-heading)',
+						},
+						h5: {
+							color: 'var(--aw-color-text-heading)',
+						},
+						h6: {
+							color: 'var(--aw-color-text-heading)',
+						},
+					},
+				},
+			},
 		},
 	},
 	plugins: [
