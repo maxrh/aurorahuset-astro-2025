@@ -10,12 +10,43 @@ media_folder: "public/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "src/content/post" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: "siteInfo"
+    label: "Site Information"
+    label_singular: "Site Info"
+    files:
+      - label: "Kontaktinformation"
+        name: "contact"
+        file: "src/data/siteInfo.json"
+        fields:
+          - {label: "Adresse", name: "address", widget: "string"}
+          - {label: "Postnummer og By", name: "city", widget: "string"}
+          - {label: "Telefon", name: "phone", widget: "string"}
+          - {label: "Døgnåben Vagttelefon", name: "hotline", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Firma Navn", name: "companyName", widget: "string"}
+          - {label: "CVR Nummer", name: "cvr", widget: "string"}
+          - {label: "Ledige Pladser", name: "vacancies", widget: "number", value_type: "int", default: 0}
+
+  - name: "pages"
+    label: "Sider"
+    label_singular: "Side"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "~/layouts/MarkdownLayout.astro"}
+      - {label: "Indhold", name: "body", widget: "markdown"}
+    filter: {field: "layout", value: "~/layouts/MarkdownLayout.astro"}
+  
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/post"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -24,18 +55,3 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "pages"
-    label: "Pages"
-    files:
-      - label: "About Page"
-        name: "about"
-        file: "src/pages/about.astro"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Contact Page"
-        name: "contact"
-        file: "src/pages/contact.astro"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}

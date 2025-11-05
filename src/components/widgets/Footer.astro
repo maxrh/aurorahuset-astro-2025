@@ -3,6 +3,7 @@ import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
 import { getHomePermalink } from '~/utils/permalinks';
 import Logo from '~/components/Logo.astro';
+import siteInfo from '~/data/siteInfo.json';
 
 interface Link {
   text?: string;
@@ -33,18 +34,18 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
 		class="relative max-w-7xl mx-auto px-5 sm:px-10 "
 	>
 		<div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-12 py-8 md:py-12">
-			<div class="col-span-12 lg:col-span-6">
+			<div class="col-span-12 lg:col-span-10">
 				<div class="mb-4">
 					<a class="inline-flex items-center" href={getHomePermalink()}>
 						<Logo />
 					</a>
 				</div>
 				<ul class="text-muted text-sm space-y-1">
-					<li>Valorevej 18, 4130 Viby Sjælland</li>
-					<li>Tlf: 58 58 00 10</li>
-					<li>Mail: info@kcaurora.dk</li>
-					<li>Drives af Aurora Women ApS</li>
-					<li>CVR: 29901403</li>
+					<li>{siteInfo.address}, {siteInfo.city}</li>
+					<li>Tlf: {siteInfo.phone}</li>
+					<li>Mail: {siteInfo.email}</li>
+					<li>Drives af {siteInfo.companyName}</li>
+					<li>CVR: {siteInfo.cvr}</li>
 				</ul>
 				<div class="text-sm text-muted flex gap-1">
 				{
@@ -63,7 +64,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
 			</div>
 			{
 				links.map(({ title, links }) => (
-				<div class="col-span-6 md:col-span-3 lg:col-span-2">
+				<div class="col-span-12 lg:col-span-2">
 					<div class="dark:text-gray-300 font-medium mb-2">{title}</div>
 					{links && Array.isArray(links) && links.length > 0 && (
 					<ul class="text-sm">
