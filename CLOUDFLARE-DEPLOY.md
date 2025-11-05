@@ -148,4 +148,14 @@ git push origin main
 ### 404 on /admin
 - Ensure `public/admin/` folder is in build output
 - Check `dist/admin/` exists after build
-- Verify Cloudflare Pages is serving static files correctly
+- Verify `public/_redirects` file is deployed
+- **Important**: Do NOT create `src/pages/admin.astro` - it conflicts with static `/admin` folder
+- Cloudflare Pages reads `public/_redirects` for redirect rules
+
+### Admin redirect not working
+- Check `public/_redirects` exists with correct format:
+  ```
+  /admin /admin/index.html 200
+  ```
+- Verify in browser DevTools → Network that `/admin` returns 200, not 404
+- Clear Cloudflare cache if needed (Cloudflare Dashboard → Caching → Purge Everything)

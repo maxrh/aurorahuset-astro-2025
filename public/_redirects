@@ -1,0 +1,6 @@
+# Cloudflare Pages Redirects
+# https://developers.cloudflare.com/pages/platform/redirects/
+
+# Admin redirect - serve the CMS at /admin
+/admin /admin/index.html 200
+/admin/* /admin/:splat 200

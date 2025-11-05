@@ -1,18 +1,2 @@
-# Cloudflare Pages Build Configuration
-[build]
-  command = "npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "18"
-
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200
-
-# Handle client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# This file is for reference only - Cloudflare Pages uses public/_redirects
+# Build configuration is in wrangler.toml and Cloudflare dashboard

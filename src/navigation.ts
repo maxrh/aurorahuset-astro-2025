@@ -4,19 +4,19 @@ export const headerData = {
   links: [
     {
       text: 'Brug for hjælp?',
-      href: getPermalink('/#hjaelp'),
+      href: '/#hjaelp',
     },
     {
       text: 'Om AuroraHuset',
-      href: getPermalink('/#om-aurorahuset'),
+      href: '/#om-aurorahuset',
     },
     {
       text: 'Om Opholdet',
-      href: getPermalink('/#om-opholdet'),
+      href: '/#om-opholdet',
     },
     {
       text: 'Støt & samarbejde',
-      href: getPermalink('/#stoet-samarbejde'),
+      href: '/#stoet-samarbejde',
     },
   
     
@@ -31,9 +31,9 @@ export const footerData = {
         {
             title: '',
             links: [
-                { text: 'Om AuroraHuset', href: '/om-aurorahuset' },
-                { text: 'Om Opholdet', href: '/ophold' },
-                { text: 'Kontakt', href: '/kontakt' },
+                { text: 'Om AuroraHuset', href: '/om-aurorahuset/' },
+                { text: 'Om Opholdet', href: '/ophold/' },
+                { text: 'Kontakt', href: '/kontakt/' },
                 { text: 'Cookiepræferencer', href: '#' },
                 { text: 'Privatlivspolitik', href: getPermalink('/privacy') },
             ],
