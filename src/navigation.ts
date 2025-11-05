@@ -27,26 +27,13 @@ export const headerData = {
 
 export const footerData = {
     links: [
+  
         {
             title: '',
             links: [
                 { text: 'Om AuroraHuset', href: '/om-aurorahuset' },
-                { text: 'Tilgang & metoder', href: '/tilgang-metoder' },
-                { text: 'Ophold hos AuroraHuset', href: '/ophold' },
-            ],
-        },
-    
-        {
-            title: '',
-            links: [
-                { text: 'Donationer', href: '/donationer' },
-                { text: 'Samarbejde', href: '/samarbejde' },
-                { text: 'Job', href: '/job' },
-            ],
-        },
-        {
-            title: '',
-            links: [
+                { text: 'Om Opholdet', href: '/ophold' },
+                { text: 'Kontakt', href: '/kontakt' },
                 { text: 'Cookiepræferencer', href: '#' },
                 { text: 'Privatlivspolitik', href: getPermalink('/privacy') },
             ],
