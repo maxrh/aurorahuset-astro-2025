@@ -39,8 +39,8 @@ git push origin dev
 # Then deploy via Cloudflare Dashboard
 ```
 
-### 4. Test Production Login
-1. Visit `https://yourdomain.com/admin`
+### 4. Test Staging Login
+1. Visit `https://aurorahuset-astro-2025.pages.dev/admin`
 2. Click "Login with GitHub"
 3. Complete OAuth flow
 4. Verify CMS dashboard loads
@@ -52,10 +52,15 @@ git push origin dev
 User → /admin → config.yml → Proxy Backend → No Auth ✓
 ```
 
-**Production** (`aurorahuset.dk/admin`):
+**Staging** (`aurorahuset-astro-2025.pages.dev/admin`):
 ```
 User → /admin → config-production.yml → GitHub OAuth → 
 DecapBridge Verification → Authorized Users Only ✓
+```
+
+**Production** (`aurorahuset.dk/admin`):
+```
+Same as staging - protected with GitHub OAuth authentication ✓
 ```
 
 ## 🔐 Security Features
@@ -92,5 +97,6 @@ DecapBridge Verification → Authorized Users Only ✓
 **Current Status**: 
 - ✅ Configuration files ready
 - ✅ Auto-detection implemented
+- ✅ Staging URL configured: https://aurorahuset-astro-2025.pages.dev/
 - ⏳ Awaiting DecapBridge user setup
-- ⏳ Awaiting production deployment
+- ⏳ Awaiting staging deployment test

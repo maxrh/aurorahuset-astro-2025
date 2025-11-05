@@ -5,7 +5,8 @@ This project uses **DecapBridge** with PKCE authentication for production CMS ac
 ## Overview
 
 - **Local Development**: Uses proxy backend (no authentication required)
-- **Production**: Uses DecapBridge PKCE authentication (password protected)
+- **Staging** (https://aurorahuset-astro-2025.pages.dev/): Uses DecapBridge PKCE authentication (password protected)
+- **Production** (https://aurorahuset.dk): Uses DecapBridge PKCE authentication (password protected)
 
 The admin page automatically detects the environment and loads the appropriate configuration.
 
@@ -23,7 +24,7 @@ The admin page automatically detects the environment and loads the appropriate c
 
 3. Access CMS at `http://localhost:4321/admin` (no login required)
 
-## For Production
+## For Staging & Production
 
 ### Initial Setup (One-time)
 
@@ -45,10 +46,15 @@ The admin page automatically detects the environment and loads the appropriate c
 
 ### User Login Flow
 
-1. Navigate to `https://aurorahuset.dk/admin`
+**Staging:**
+1. Navigate to `https://aurorahuset-astro-2025.pages.dev/admin`
 2. Click "Login with GitHub"
 3. Complete GitHub OAuth flow
 4. If authorized, you'll be redirected to the CMS dashboard
+
+**Production (when configured):**
+1. Navigate to `https://aurorahuset.dk/admin`
+2. Same login flow as staging
 
 ### Managing Users
 

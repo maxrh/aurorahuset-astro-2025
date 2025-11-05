@@ -32,10 +32,12 @@
 
 ## CMS Authentication on Cloudflare Pages
 
-The `/admin` route is automatically protected in production using DecapBridge PKCE authentication.
+The `/admin` route is automatically protected on both staging and production using DecapBridge PKCE authentication.
 
 ### How it works:
-1. User visits `https://yourdomain.com/admin`
+1. User visits `/admin` on staging or production:
+   - Staging: `https://aurorahuset-astro-2025.pages.dev/admin`
+   - Production: `https://aurorahuset.dk/admin` (when configured)
 2. Decap CMS loads `config-production.yml`
 3. User clicks "Login with GitHub"
 4. GitHub OAuth flow authenticates the user
@@ -67,7 +69,50 @@ If you want to add HTTP Basic Auth or Cloudflare Access to `/admin`:
 
 **Note**: These are additional layers. DecapBridge authentication is already secure.
 
-## Custom Domain Setup
+## Deployment Environments
+
+### Staging (Testing)
+- **URL**: https://aurorahuset-astro-2025.pages.dev/
+- **Branch**: `dev`
+- **Purpose**: Test changes before production
+- **CMS Access**: `/admin` with DecapBridge authentication
+
+### Production
+- **URL**: https://aurorahuset.dk (when configured)
+- **Branch**: `main` (when ready)
+- **Purpose**: Live public website
+
+## Deployment Workflow
+
+### For Content Updates
+1. Edit content in `/admin` interface
+2. Changes auto-commit to GitHub `dev` branch
+3. Cloudflare Pages auto-deploys to staging
+4. Test at https://aurorahuset-astro-2025.pages.dev/
+5. Merge to `main` when ready for production
+
+### For Code/Design Updates
+```bash
+# 1. Development branch
+git checkout dev
+git add .
+git commit -m "Your changes"
+git push origin dev
+# Auto-deploys to staging: https://aurorahuset-astro-2025.pages.dev/
+
+# 2. Test on staging
+# Visit https://aurorahuset-astro-2025.pages.dev/
+# Test all functionality
+# Verify changes look correct
+
+# 3. Production deployment (when ready)
+git checkout main
+git merge dev
+git push origin main
+# Auto-deploys to production domain
+```
+
+## Custom Domain Setup (When Ready for Production)
 
 1. **Add Custom Domain in Cloudflare Pages**:
    - Go to your Pages project
@@ -79,29 +124,7 @@ If you want to add HTTP Basic Auth or Cloudflare Access to `/admin`:
 
 3. **Update CMS Config**:
    - Update `site_url` in `config-production.yml` to your custom domain
-
-## Deployment Workflow
-
-### For Content Updates
-- Edit content in `/admin` interface
-- Changes auto-commit to GitHub
-- Cloudflare Pages auto-deploys
-
-### For Code Updates
-```bash
-# Development branch
-git checkout dev
-git add .
-git commit -m "Your changes"
-git push origin dev
-# Auto-deploys to preview URL
-
-# Production deployment
-git checkout main
-git merge dev
-git push origin main
-# Auto-deploys to production domain
-```
+   - Commit and push changes
 
 ## Monitoring
 
