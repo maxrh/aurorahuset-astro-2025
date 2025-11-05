@@ -39,15 +39,34 @@ npm run preview
 ```
 
 ### Decap CMS Setup
-1. The CMS admin interface is available at `/admin` when running the development server
-2. Configure your git provider in `public/admin/config.yml`
-3. For production, set up authentication with your chosen git provider
+
+**Local Development:**
+```bash
+# Terminal 1: Start CMS proxy server
+npm run dev:cms:start
+
+# Terminal 2: Start Astro dev server
+npm run dev
+
+# Access CMS at http://localhost:4321/admin (no login required)
+```
+
+**Production Authentication:**
+- Production uses DecapBridge PKCE authentication with GitHub OAuth
+- Only authorized users can access `/admin` in production
+- See `PRODUCTION-AUTH-SETUP.md` for complete setup guide
+
+**Documentation:**
+- 📖 `AUTHENTICATION.md` - Complete authentication guide
+- 📖 `CLOUDFLARE-DEPLOY.md` - Deployment instructions
+- 📖 `PRODUCTION-AUTH-SETUP.md` - Quick reference
 
 ### Cloudflare Pages Deployment
 1. Connect your repository to Cloudflare Pages
 2. Set build command: `npm run build`
 3. Set output directory: `dist`
 4. Deploy automatically on git pushes
+5. See `CLOUDFLARE-DEPLOY.md` for detailed instructions
 
 <br>
 
