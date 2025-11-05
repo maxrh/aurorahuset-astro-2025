@@ -6,10 +6,7 @@
   <title>Content Manager - AuroraHuset</title>
 </head>
 <body>
-  <!-- Include the script that builds the page and powers Decap CMS -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  
-  <!-- Auto-detect environment and load appropriate config -->
+  <!-- Environment detection script runs before CMS loads -->
   <script>
     // Check if we're running locally (localhost or 127.0.0.1)
     const isLocal = window.location.hostname === 'localhost' || 
@@ -17,24 +14,15 @@
                     window.location.hostname === '';
     
     if (isLocal) {
-      // Local development - use proxy backend
       console.log('🔧 Loading local development config (proxy backend)');
-      CMS.init({
-        config: {
-          load_config_file: true,
-          config_url: '/admin/config.yml'
-        }
-      });
+      window.CMS_CONFIG_URL = '/admin/config.yml';
     } else {
-      // Production - use DecapBridge PKCE authentication
       console.log('🔒 Loading production config (DecapBridge PKCE auth)');
-      CMS.init({
-        config: {
-          load_config_file: true,
-          config_url: '/admin/config-production.yml'
-        }
-      });
+      window.CMS_CONFIG_URL = '/admin/config-production.yml';
     }
   </script>
+  
+  <!-- Include the script that builds the page and powers Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
