@@ -2,7 +2,8 @@ site:
   name: AuroraHuset
   site: 'https://astrowind.vercel.app'
   base: '/'
-  trailingSlash: false
+  trailingSlash: true
+  # Set to true to allow /admin/ directory to work properly
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 

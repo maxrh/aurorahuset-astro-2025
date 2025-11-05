@@ -22,7 +22,9 @@ The admin page automatically detects the environment and loads the appropriate c
    npm run dev
    ```
 
-3. Access CMS at `http://localhost:4321/admin` (no login required)
+3. Access CMS at `http://localhost:4321/admin` or `http://localhost:4321/admin/` (no login required)
+   - `/admin` redirects to `/admin/` automatically
+   - The trailing slash is needed to load the admin directory properly
 
 ## For Staging & Production
 

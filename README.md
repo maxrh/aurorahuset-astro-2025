@@ -48,7 +48,8 @@ npm run dev:cms:start
 # Terminal 2: Start Astro dev server
 npm run dev
 
-# Access CMS at http://localhost:4321/admin (no login required)
+# Access CMS at http://localhost:4321/admin (auto-redirects to /admin/ with trailing slash)
+# Note: The trailing slash is required for the static admin directory
 ```
 
 **Production Authentication:**
