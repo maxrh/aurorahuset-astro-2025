@@ -29,7 +29,8 @@ auth:
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 # Add site links in Decap CMS (optional)
-site_url: https://aurorahuset.dk
+# Staging URL - update to https://aurorahuset.dk when moving to production
+site_url: https://aurorahuset-astro-2025.pages.dev
 
 # These lines should *not* be indented
 media_folder: "public/images/uploads" # Media files will be stored in the repo under public/images/uploads

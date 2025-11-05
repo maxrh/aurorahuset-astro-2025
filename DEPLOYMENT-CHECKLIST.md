@@ -86,9 +86,9 @@ git push origin dev
 
 ## Testing
 
-### 11. Production CMS Access
-- [ ] Navigate to `https://yourdomain.com/admin`
-- [ ] Verify production config is loaded (check console)
+### 11. Staging CMS Access
+- [ ] Navigate to `https://aurorahuset-astro-2025.pages.dev/admin`
+- [ ] Verify production config is loaded (check console for: "🔒 Loading production config")
 - [ ] Click "Login with GitHub"
 - [ ] Complete OAuth flow
 - [ ] CMS dashboard loads successfully
@@ -144,19 +144,30 @@ If something doesn't work:
 
 ## Success Criteria
 
-Your production deployment is successful when:
+Your staging deployment is successful when:
 
-✅ Website loads on production URL  
+✅ Website loads on staging URL (https://aurorahuset-astro-2025.pages.dev/)  
 ✅ `/admin` requires GitHub login  
 ✅ Authorized users can access CMS  
 ✅ Content edits save to GitHub  
 ✅ Changes trigger automatic deploys  
 ✅ All contact information displays correctly  
 
+### Production Deployment (When Ready)
+
+After successful staging testing:
+
+✅ Custom domain configured  
+✅ Production branch (`main`) updated  
+✅ SSL certificate active  
+✅ All testing passed on staging  
+
 ---
 
-**Date Completed**: _______________  
+**Staging Deployed**: _______________  
+**Production Deployed**: _______________  
 **Deployed By**: _______________  
-**Production URL**: _______________  
+**Staging URL**: https://aurorahuset-astro-2025.pages.dev/  
+**Production URL**: https://aurorahuset.dk  
 **Notes**: 
 
