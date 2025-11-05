@@ -6,23 +6,8 @@
   <title>Content Manager - AuroraHuset</title>
 </head>
 <body>
-  <!-- Environment detection script runs before CMS loads -->
-  <script>
-    // Check if we're running locally (localhost or 127.0.0.1)
-    const isLocal = window.location.hostname === 'localhost' || 
-                    window.location.hostname === '127.0.0.1' ||
-                    window.location.hostname === '';
-    
-    if (isLocal) {
-      console.log('🔧 Loading local development config (proxy backend)');
-      window.CMS_CONFIG_URL = '/admin/config.yml';
-    } else {
-      console.log('🔒 Loading production config (DecapBridge PKCE auth)');
-      window.CMS_CONFIG_URL = '/admin/config-production.yml';
-    }
-  </script>
-  
   <!-- Include the script that builds the page and powers Decap CMS -->
+  <!-- CMS will automatically load config from /admin/config.yml -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
