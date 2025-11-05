@@ -2,7 +2,7 @@
 backend:
   name: git-gateway
   repo: maxrh/aurorahuset-astro-2025
-  branch: dev
+  branch: main
   auth_type: pkce
   base_url: https://auth.decapbridge.com
   auth_endpoint: /sites/cfc07566-584e-4a39-8090-6b720205b1e3/pkce
