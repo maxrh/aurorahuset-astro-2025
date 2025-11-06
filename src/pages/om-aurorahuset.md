@@ -2,7 +2,7 @@
 title: Om AuroraHuset
 layout: ~/layouts/MarkdownLayout.astro
 ---
-AuroraHuset er et krisecenter, hvor kvinder og deres børn tilbydes midlertidigt ophold i trygge, omsorgsfulde og professionelle rammer. Vi arbejder ud fra **Traumebevidst Tilgang, Recovery** og **Responsbaseret Praksis** – og bygger vores indsats på værdier som **respekt, ligeværd og handlekraft**.
+TEST AuroraHuset er et krisecenter, hvor kvinder og deres børn tilbydes midlertidigt ophold i trygge, omsorgsfulde og professionelle rammer. Vi arbejder ud fra **Traumebevidst Tilgang, Recovery** og **Responsbaseret Praksis** – og bygger vores indsats på værdier som **respekt, ligeværd og handlekraft**.
 
 AuroraHuset blev etableret i 2025. vores formål er at etablere, drive og udvikle sociale og sundhedsfaglige botilbud, der gavner borgere. Bag huset står et erfarent team med mange års praksis i arbejdet med voldsudsatte kvinder og børn.
 
