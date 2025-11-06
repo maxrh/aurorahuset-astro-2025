@@ -16,6 +16,8 @@ pnpm-debug.log*
 .env
 .env.production
 
+# CMS local config
+
 # macOS-specific files
 .DS_Store
 
