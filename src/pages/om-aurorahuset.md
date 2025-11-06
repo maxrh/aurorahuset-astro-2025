@@ -2,31 +2,31 @@
 title: Om AuroraHuset
 layout: ~/layouts/MarkdownLayout.astro
 ---
-AuroraHuset er et krisecenter, hvor kvinder og deres børn tilbydes midlertidigt ophold i trygge, omsorgsfulde og professionelle rammer. Vi arbejder ud fra **Traumebevidst Tilgang, Recovery** og **Responsbaseret Praksis** – og bygger vores indsats på værdier som **respekt, ligeværd og handlekraft**.
-
-AuroraHuset blev etableret i 2025. vores formål er at etablere, drive og udvikle sociale og sundhedsfaglige botilbud, der gavner borgere. Bag huset står et erfarent team med mange års praksis i arbejdet med voldsudsatte kvinder og børn.
-
-Vi arbejder med en **kønsbevidst og værdibåret tilgang**, inspireret af feministiske perspektiver på vold, modstand og solidaritet. Det betyder, at vi anerkender, hvordan køn, seksualitet, etnicitet og sociale forhold påvirker menneskers liv og møde med systemet – og at vi aktivt arbejder for at styrke kvinders **rettigheder, værdighed og selvbestemmelse**.
-
-AuroraHuset er godkendt af Socialtilsynet til at drive krisecenter efter **Servicelovens §109**.
-
-### Navnet Aurora
-
 Aurora betyder morgenrøde eller daggry – det første lys efter mørket.
 Navnet symboliserer håb og forvandling og afspejler vores tro på, at en ny begyndelse altid er mulig.
 
+Aurorahuset er et krisecenter, hvor kvinder og deres børn tilbydes midlertidigt ophold i trygge, omsorgsfulde og professionelle rammer. Vi arbejder ud fra **Traumebevidst Tilgang, Recovery** og **Responsbaseret Praksis** – og bygger vores indsats på værdier som **respekt, ligeværd og handlekraft**.
+
+AuroraHuset blev etableret i 2025. Bag huset står et erfarent team med mange års praksis i arbejdet med voldsudsatte kvinder og børn. Medarbejderne i Aurorahuset er erfarne socialrådgivere og pædagoger, der arbejder fagligt funderet og med professionelt engagement for kvinder og børn i udsatte livssituationer.
+
+Vi arbejder med en **kønsbevidst og værdibåret tilgang**, inspireret af feministiske perspektiver på vold, modstand og solidaritet. Det betyder, at vi anerkender, hvordan køn, seksualitet, etnicitet og sociale forhold påvirker menneskers liv og møde med systemet – og at vi aktivt arbejder for at styrke kvinder og børns **rettigheder, værdighed og selvbestemmelse**.
+
+AuroraHuset er godkendt af Socialtilsynet til at drive krisecenter efter **Servicelovens §109**. 
+Læs mere på [Tilbudsportalen](https://tilbudsportalen.dk/tilbudssoegning/tilbudDetaljeside/index?tilbudsid=ITL-6700&afdelingsid=5148e85a-5c16-418e-9a00-834987930b65&aktivtMenupunkt=ALLE_TILBUD)
+
 ## Værdigrundlag
 
-"Al sand hjælp begynder med en ydmygelse. Hjælperen må først ydmyge sig under den, han vil hjælpe… det at hjælpe er ikke at herske, men at tjene." — Søren Kierkegaard
+*"Jeg rejser mig – som daggryet, der nægter at lade sig skjule af natten"* — Maya Angelou, “Still I Rise” (1978)
 
-AuroraHuset bygger sit arbejde på **anerkendelse, traumebevidst tilgang, Responsbaseret praksis og Recovery-modellen**. Vi møder kvinder og børn med **respekt, støtte og tryghed** – og ser deres styrker fremfor deres fejl.
+Vi møder kvinder og børn med respekt, støtte og tryghed – og ser deres ressourcer og muligheder frem for de begrænsninger, der kan præge handlinger.
 
-Vi arbejder bl.a. for at:
+
+Vi arbejder blandt andet for at: 
 
 * Bring håb og omsorg til kvinder og børn, der har været udsat for vold
 * Styrke ressourcer i trygge rammer
 * Give børn mulighed for at bearbejde oplevelser og udvikle sig
-* Forebygge vold og støtte beboere i at bryde voldens spiral
+* Forebygge vold og støtte beboere i at rejse sig efter undertrykkelser
 
 I praksis betyder det, at beboeren er i centrum, støttes individuelt og mødes med ligeværdighed. Vi styrker handlekraft, selvværd og håb – for at skabe en fremtid uden vold.
 
@@ -46,7 +46,7 @@ AuroraHusets arbejde har til formål at:
 
 ## Traumebevidst organisation
 
-AuroraHuset skal bygges som en **traumebevidst organisation**.
+AuroraHuset bliver bygget op som en **traumebevidst organisation**.
 Det betyder, at vi tilrettelægger både rammer, relationer og indsatser med forståelse for, hvordan vold, overgreb og tab påvirker mennesker – og med fokus på **tryghed, stabilitet og genopbygning**.
 
 Vi arbejder ud fra principper om:
