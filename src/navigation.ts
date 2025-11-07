@@ -33,9 +33,9 @@ export const footerData = {
             links: [
                 { text: 'Om AuroraHuset', href: getPermalink('/om-aurorahuset/') },
                 { text: 'Om Opholdet', href: getPermalink('/ophold/') },
-                { text: 'Kontakt', href: getPermalink('/kontakt/') },
                 // { text: 'Cookiepræferencer', href: '#' },
-                { text: 'Privatlivspolitik', href: getPermalink('/privatlivspolitik') },
+                { text: 'Kontakt', href: getPermalink('/kontakt/') },
+                { text: 'Privatlivspolitik', href: getPermalink('/privatlivspolitik/') },
             ],
         },
     
