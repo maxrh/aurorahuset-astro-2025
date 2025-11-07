@@ -31,7 +31,7 @@ const {
 		defaultIcon={defaultIcon}
 		classes={{
 		container: 'gap-6 md:gap-16 max-w-5xl mx-auto ',
-		panel: 'p-0 items-center text-center',
+		panel: 'p-0 md:items-center md:text-center',
 		// panel:
 		//   "text-center bg-page items-center md:text-left rtl:md:text-right md:items-start p-6 p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-800",
 		icon: 'w-12 h-12 mb-6 text-primary',
@@ -39,11 +39,11 @@ const {
 		}}
 	/>
 
-	{ text && <div class="md:text-center mt-24 max-w-3xl text-sm mx-auto italic font-light text-muted leading-normal" set:html={text} /> }
+	{ text && <div class="md:text-center mt-16 md:mt-24 max-w-3xl text-base mx-auto italic font-light text-muted leading-normal" set:html={text} /> }
 
 	{
 		actions && (
-		<div class="mt-20 max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row justify-center gap-4 ">
+		<div class="mt-20 sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row justify-center gap-4 ">
 			{Array.isArray(actions) ? (
 			actions.map((action) => (
 				<div class="flex w-full sm:w-auto">

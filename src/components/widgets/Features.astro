@@ -36,11 +36,11 @@ const {
 			...((classes?.items as Record<string, never>) ?? {}),
 		}}
 	/>
-	{ text && <div class="md:text-center mt-20 max-w-3xl text-sm mx-auto italic  font-light text-muted leading-normal intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter" set:html={text} /> }
+	{ text && <div class="md:text-center mt-14 md:mt-20 max-w-3xl text-base mx-auto italic  font-light text-muted leading-normal intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter" set:html={text} /> }
 
 	{
 		actions && (
-		<div class="mt-20 max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row justify-center gap-4 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
+		<div class="mt-20 sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row justify-center gap-4 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
 			{Array.isArray(actions) ? (
 			actions.map((action) => (
 				<div class="flex w-full sm:w-auto">

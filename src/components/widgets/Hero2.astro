@@ -12,100 +12,131 @@ const {
 	content = await Astro.slots.render('content'),
 	actions = await Astro.slots.render('actions'),
 	image = await Astro.slots.render('image'),
+	illustration = await Astro.slots.render('illustration'),
 	vacancies = await Astro.slots.render('vacancies'),
 	id,
 	bg = await Astro.slots.render('bg'),
 } = Astro.props;
 ---
 
-<section class="relative lg:-mt-[80px] 2xl:-mt-[90px] not-prose" {...id ? { id } : {}}>
+<section class="relative lg:-mt-[80px] 2xl:-mt-[90px] not-prose overflow-x-clip" {...id ? { id } : {}}>
 	<div class="absolute inset-0 pointer-events-none" aria-hidden="true">
 		<slot name="bg">
 			{bg ? <Fragment set:html={bg} /> : null}
 		</slot>
 	</div>
-	<div class="relative max-w-7xl mx-auto px-4 sm:px-10  ">
+	<div class="relative max-w-7xl mx-auto px-6 sm:px-10">
 		<div class="pt-0 lg:pt-[80px] 2xl:pt-[90px] pointer-events-none"></div>
-		<div class="py-12 lg:pt-0 lg:pb-6 lg:min-h-[calc(100vh-80px)] 2xl:lg:min-h-[calc(100vh-90px)] lg:flex lg:items-center lg:gap-8">
-			<div class="basis-1/2 text-center lg:text-left pb-10 lg:pb-0 mx-auto">
-				{
-					tagline && (
-						<p
-							class="mb-10 text-base text-secondary font-bold tracking-wide uppercase intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
-							set:html={tagline}
-						/>
-					)
-				}
-				
-				{
-				title && (
-					<h1
-						class="text-5xl md:text-7xl font-extrabold tracking-tight font-heading intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
-						set:html={title}
-					/>
-				)
-				}
-				<div class="max-w-3xl mx-auto lg:max-w-none mt-10">
-				{
-					subtitle && (
-					<p
-						class="text-xl text-muted intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
-						set:html={subtitle}
-					/>
-					)
-				}
+		<div class="relative py-12 lg:pt-0 lg:pb-6 lg:h-[calc(100vh-80px)] 2xl:lg:h-[calc(100vh-90px)] ">
 
-				{
-					(actions || vacancies) && (
-					<div class="mt-16 max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-8 lg:justify-start lg:max-w-7xl intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
-						{actions && Array.isArray(actions) ? (
-							actions.map((action) => (
-								<div class="flex w-full sm:w-auto">
-									<Button {...(action || {})} class="w-full" />
-								</div>
-							))
-						) : actions ? (
-							<Fragment set:html={actions} />
-						) : null}
-						
-						{vacancies && (
-							<div class="flex w-full sm:w-auto items-center">
-								<div class="inline-flex items-center">
-									<span class="font-medium mr-4">
-										Ledige pladser
-									</span>
-									<span class=" text-xl border-2 h-12 aspect-square font-semibold flex items-center justify-center rounded-xl">
-										<Fragment set:html={vacancies} />
-									</span>
-								</div>
-							</div>
-						)}
-					</div>
-					)
-				}
-				</div>
-				{content && <Fragment set:html={content} />}
-			</div>
-			<div class="basis-1/2">
-				{
-				image && (
-					<div class="relative m-auto max-w-5xl intersect-once intersect-no-queue motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
-					{typeof image === 'string' ? (
-						<Fragment set:html={image} />
-					) : (
-						<Image
-						class="mx-auto rounded-md w-full"
-						widths={[400, 768, 1024, 2040]}
-						sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-						loading="eager"
-						width={700}
-						height={700}
-						{...image}
+			<div class="relative lg:flex lg:items-center lg:gap-8 lg:h-full z-10">
+				<div class="basis-2/3 text-left pb-10 lg:pb-0 mx-auto">
+					{
+						tagline && (
+							<p
+								class="mb-10 text-base text-secondary font-bold tracking-wide uppercase intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
+								set:html={tagline}
+							/>
+						)
+					}
+					
+					{
+					title && (
+						<h1
+							class="text-5xl md:text-7xl font-extrabold tracking-tight font-heading intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
+							set:html={title}
 						/>
-					)}
+					)
+					}
+					<div class="max-w-3xl mx-auto lg:max-w-none mt-10">
+					{
+						subtitle && (
+						<p
+							class="max-w-xl text-lg text-muted intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
+							set:html={subtitle}
+						/>
+						)
+					}
+
+					{
+						(actions || vacancies) && (
+						<div class="mt-16 sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 md:gap-8 lg:justify-start lg:max-w-7xl intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
+							{vacancies && (
+								<div class="flex w-full sm:w-auto items-center">
+									<div class="inline-flex items-center">
+										<span class=" text-xl border-2 h-12 aspect-square font-semibold flex items-center justify-center rounded-xl">
+											<Fragment set:html={vacancies} />
+										</span>
+										<span class="font-medium ml-4">
+											Ledige pladser
+										</span>
+										
+									</div>
+								</div>
+							)}
+							
+							{actions && Array.isArray(actions) ? (
+								actions.map((action) => (
+									<div class="flex w-full sm:w-auto">
+										<Button {...(action || {})} class="w-full" />
+									</div>
+								))
+							) : actions ? (
+								<Fragment set:html={actions} />
+							) : null}
+							
+							
+						</div>
+						)
+					}
 					</div>
-				)
-				}
+					{content && <Fragment set:html={content} />}
+				</div>
+				<div class="basis-1/3">
+					{
+						image && (
+							<div class="relative m-auto max-w-5xl intersect-once intersect-no-queue motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
+							{typeof image === 'string' ? (
+								<Fragment set:html={image} />
+							) : (
+								<Image
+								class="mx-auto rounded-md w-full"
+								widths={[400, 768, 1024, 2040]}
+								sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+								loading="eager"
+								width={700}
+								height={700}
+								{...image}
+								/>
+							)}
+							</div>
+						)
+					}
+				</div>
+			</div>
+			<div class="absolute inset-0 pointer-events-none flex items-center z-0" aria-hidden="true">
+				<div class="basis-1/3"></div>
+				<div class="basis-2/3 h-full">
+					{
+						illustration && (
+							<div class="h-full py-20 flex items-center justify-end">
+								{typeof illustration === 'string' ? (
+									<Fragment set:html={illustration} />
+								) : (
+									<Image
+									class="h-full w-auto ml-auto object-contain"
+									widths={[400, 768, 1024, 2040]}
+									sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+									loading="eager"
+									width={700}
+									height={900}
+									{...illustration}
+									/>
+								)}
+							</div>
+						)
+					}
+				</div>
 			</div>
 		</div>
 	</div>

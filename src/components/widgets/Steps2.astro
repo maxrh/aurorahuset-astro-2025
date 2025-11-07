@@ -28,7 +28,7 @@ const {
 				subtitle={subtitle}
 				tagline={tagline}
 				classes={{
-					container: ' text-center md:text-left rtl:md:text-right mb-10 md:mb-16',
+					container: 'md:text-left rtl:md:text-right mb-10 md:mb-16',
 					title: 'text-3xl lg:text-5xl font-extrabold font-heading',
 					subtitle: 'text-xl text-muted',
 					// ...((classes?.headline as {}) ?? {}),
@@ -37,7 +37,7 @@ const {
 
 			{
 				actions && (
-					<div class="w-full text-center md:text-left rtl:md:text-right flex flex-nowrap flex-col sm:flex-row gap-4">
+					<div class="w-full text-left rtl:md:text-right flex flex-nowrap flex-col sm:flex-row gap-4">
 						{Array.isArray(actions) ? (
 							actions.map((action) => (
 								<div class="flex w-full sm:w-auto">
