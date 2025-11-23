@@ -1,0 +1,171 @@
+{
+  "hero": {
+    "title": "Velkommen til AuroraHuset",
+    "subtitle": "Et trygt krisecenter for kvinder, der har været udsat for vold, trusler, social kontrol eller anden form for overgreb. Hos os bliver du mødt med respekt, tillid og støtte – uanset din situation."
+  },
+  "help": {
+    "title": "Har du brug for hjælp?",
+    "subtitle": "Hvis du har brug for at komme væk fra volden – eller har brug for råd og vejledning – så kontakt os. Er du i tvivl, om du er udsat for vold? Så er du også velkommen til at ringe. Vi er her for dig.",
+    "items": [
+      { "title": "Døgnåben vagttelefon" },
+      { "title": "Rådgivning ( alle dage kl. 10 – 17 )" },
+      { "title": "Skriv til os" }
+    ]
+  },
+  "about": {
+    "title": "AuroraHuset er et krisecenter med plads til 8 kvinder og deres børn",
+    "subtitle": "Vi skaber et <strong>roligt og trygt miljø</strong>, hvor du kan få den støtte og tid, du behøver til at finde fodfæste og begynde på ny. Hos os får du:",
+    "items": [
+      {
+        "title": "Eget værelse",
+        "description": "Eget værelse med adgang til fælles badeværelse, køkken, stue og orangeriet",
+        "icon": "tabler:bed"
+      },
+      {
+        "title": "Rolige omgivelser",
+        "description": "Rolige, grønne omgivelser med have og shelter på en fredelig landejendom",
+        "icon": "tabler:tree"
+      },
+      {
+        "title": "Fællesskab med respekt",
+        "description": "Et fællesskab med respekt og privatliv, hvor du kan føle dig tryg",
+        "icon": "tabler:heart"
+      },
+      {
+        "title": "Traumebevidst tilgang",
+        "description": "Professionel støtte baseret på traumebevidst tilgang, recovery og responsbaseret praksis",
+        "icon": "tabler:shield-heart"
+      },
+      {
+        "title": "Børn velkommen",
+        "description": "Vi har plads til kvinder med børn og fokuserer på hele familiens trivsel",
+        "icon": "tabler:baby-carriage"
+      },
+      {
+        "title": "Sikkerhed og tryghed",
+        "description": "Ejendommen er sikret med alarm, videoovervågning og andre sikkerhedsforanstaltninger",
+        "icon": "tabler:shield-check"
+      }
+    ],
+    "footerText": "Af hensyn til beboernes trivsel og allergier er kæledyr desværre ikke tilladt."
+  },
+  "targetGroup": {
+    "title": "Hvem kan få hjælp?",
+    "subtitle": "AuroraHuset er for kvinder, der er udsat for <strong>vold – psykisk, fysisk, seksuel, økonomisk eller i form af social kontrol</strong>. Vi tilbyder et trygt og respektfuldt ophold, hvor du kan få ro, støtte og tid til at genfinde styrken til at leve et liv uden vold.",
+    "items": [
+      {
+        "title": "Kvinder udsat for vold",
+        "description": "Kvinder, der er udsat for psykisk, fysisk, seksuel eller økonomisk vold",
+        "icon": "tabler:heart-handshake"
+      },
+      {
+        "title": "Mødre med børn",
+        "description": "Vi har plads til kvinder med børn og støtter hele familien",
+        "icon": "tabler:baby-carriage"
+      },
+      {
+        "title": "Alle baggrunde",
+        "description": "Uanset kultur, sprog eller tidligere erfaringer - vi møder dig hvor du er",
+        "icon": "tabler:world"
+      }
+    ],
+    "footerText": "Da der bor børn i huset, kan vi desværre ikke tilbyde ophold til kvinder med aktivt stof- eller alkoholbrug eller ubehandlede, alvorlige psykiatriske lidelser. Dette er for at beskytte både kvinders og børns trivsel – og sikre, at alle kan føle sig trygge."
+  },
+  "stay": {
+    "title": "Vi tilbyder et trygt og respektfuldt ophold, med ro og støtte genfinde styrken",
+    "subtitle": "Aurorahuset er for kvinder, der er udsat for vold – psykisk, fysisk, seksuel, økonomisk eller i form af social kontrol. Vi tilbyder et trygt og respektfuldt ophold, hvor du kan få ro, støtte og tid til at genfinde styrken til at leve et liv uden vold.",
+    "items": [
+      { "title": "Tryghed og ro til at finde fodfæste – i dit eget tempo" },
+      { "title": "Støtte og rådgivning i forhold til din aktuelle situation" },
+      { "title": "Fællesskab med andre kvinder i lignende livssituationer" },
+      { "title": "Hjælp til at skabe overblik over bolig, økonomi og fremtid" },
+      { "title": "Respekt for dine valg, grænser og ønsker for dit liv" }
+    ],
+    "contentTitle": "Du kan forvente:"
+  },
+  "phases": {
+    "title": "Opholdets faser",
+    "subtitle": "Opholdet tilpasses altid den enkelte kvinde og eventuelle børn og organiseres i fem faser.",
+    "items": [
+      {
+        "title": "Henvendelse og visitation",
+        "icon": "tabler:clipboard-check",
+        "listItems": [
+          "Afklaring af målgruppe og behov ",
+          "Screening og eventuel indskrivning",
+          "Indsamling af oplysninger til senere opfølgning"
+        ]
+      },
+      {
+        "title": "Optagelse og afklaring",
+        "icon": "tabler:door-enter",
+        "listItems": [
+          "Afdækning af voldens karakter og støttebehov",
+          "Introduktion til husets rammer og rettigheder",
+          "Råd og vejledning"
+        ]
+      },
+      {
+        "title": "Ro og stabilisering",
+        "icon": "tabler:leaf",
+        "listItems": [
+          "Krisehjælp, støtte og tryghed",
+          "Hjælp til at skabe struktur og tillid",
+          "Støtte til at genfinde ro i krop og sind"
+        ]
+      },
+      {
+        "title": "Ophold og støtte",
+        "description": "Indsatserne kan omfatte:",
+        "icon": "tabler:puzzle",
+        "listItems": [
+          "<strong>Forældrerolle:</strong> støtte til struktur, rutiner og børns trivsel",
+          "<strong>Uddannelse og beskæftigelse:</strong> vejledning og kontakt til relevante aktører",
+          "<strong>Netværk og relationer:</strong> styrkelse af støttende kontakter, udflugter, sociale arrangementer",
+          "<strong>Hverdag:</strong> hjælp til budgetlægning, indkøb, fællesmadlavning og sundhed",
+          "<strong>Administration:</strong> Støtte til boligansøgning og myndighedskontakt",
+          "<strong>Støtte til børn:</strong> Samtaler og aktiviteter tilpasset alder og behov - Trygge fællesskaber og skoleunderstøttelse - Fokus på barnets trivsel, selvforståelse og håb"
+        ]
+      },
+      {
+        "title": "Udslusning og efterværn",
+        "icon": "tabler:door-exit",
+        "listItems": [
+          "Forberedelse til flytning og koordinering med kommune",
+          "Hjælp til bolig og økonomi",
+          "Efterværn, rådgivning og netværksaktiviteter"
+        ]
+      }
+    ]
+  },
+  "donations": {
+    "title": "Donationer",
+    "subtitle": "Vi er taknemmelige for al den støtte, vi modtager – økonomisk, praktisk og menneskelig. Donationer hjælper os med at skabe trygge, stabile og udviklende rammer for kvinder og børn, der har levet med vold.",
+    "items": [
+      {
+        "title": "Donér penge",
+        "description": "Økonomisk støtte hjælper os med at drive centeret og tilbyde den bedste hjælp til kvinder og børn i krise.",
+        "icon": "tabler:pig-money"
+      },
+      {
+        "title": "Donér varer",
+        "description": "Vi har altid brug for møbler, tøj, legetøj eller plejeprodukter og andre praktiske ting til kvinder og børn på centeret.",
+        "icon": "tabler:gift"
+      },
+      {
+        "title": "Donér oplevelser",
+        "description": "Giv kvinder og børn mulighed for at deltage i aktiviteter, udflugter eller kurser, der kan styrke deres trivsel og netværk.",
+        "icon": "tabler:balloon"
+      }
+    ],
+    "footerText": "Da Aurorahuset drives af Aurora Women ApS, er donationer ikke fradragsberettigede, men vi garanterer, at alle bidrag anvendes til beboernes trivsel."
+  },
+  "collaboration": {
+    "title": "Samarbejde",
+    "subtitle": "AuroraHuset samarbejder med kommuner, myndigheder, og civilsamfundsaktører for at sikre en helhedsorienteret indsats for kvinder og børn. Vi deltager aktivt i faglige netværk, bl.a. gennem DI Sundhed & Velfærd, og indgår i partnerskaber, der fremmer tryghed, udvikling og et liv uden vold."
+  },
+  "jobs": {
+    "title": "Job hos AuroraHuset",
+    "subtitle": "I Aurorahuset søger vi medarbejdere, der med faglighed, empati og ansvarlighed vil være med til at skabe trygge rammer og en ny begyndelse for kvinder og børn, der har levet med vold."
+  }
+}

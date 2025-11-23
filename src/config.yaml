@@ -1,6 +1,6 @@
 site:
   name: AuroraHuset
-  site: 'https://astrowind.vercel.app'
+  site: 'https://kcaurora.dk'
   base: '/'
   trailingSlash: true
   # Set to true to allow /admin/ directory to work properly
@@ -12,7 +12,7 @@ metadata:
   title:
     default: AuroraHuset
     template: '%s — AuroraHuset'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: 'AuroraHuset er et trygt krisecenter for kvinder og børn, der har været udsat for vold. Vi tilbyder beskyttelse, omsorg og professionel støtte i rolige og trygge rammer.'
   robots:
     index: true
     follow: true
@@ -24,8 +24,8 @@ metadata:
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: ''
+    site: ''
     cardType: summary_large_image
 
 i18n:
