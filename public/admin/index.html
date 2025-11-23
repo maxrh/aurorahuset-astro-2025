@@ -9,6 +9,11 @@
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   
+  <!-- Register Preview Styles -->
+  <script>
+    CMS.registerPreviewStyle('/admin/preview.css');
+  </script>
+
   <!-- Auto-detect environment and load appropriate config -->
   <script>
     // Check if we're running locally (localhost or 127.0.0.1)

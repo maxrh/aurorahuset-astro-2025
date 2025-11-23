@@ -11,11 +11,16 @@
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script is:inline>
     /* global CMS */
-    if (window.CMS) {
-      CMS.registerPreviewStyle('/admin/preview.css');
-    } else {
-      console.error('CMS is not defined');
-    }
+    (function() {
+      function initCMS() {
+        if (window.CMS) {
+          CMS.registerPreviewStyle('/admin/preview.css');
+        } else {
+          setTimeout(initCMS, 50);
+        }
+      }
+      initCMS();
+    })();
   </script>
 </body>
 </html>
