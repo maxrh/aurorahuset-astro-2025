@@ -82,3 +82,78 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Draft", name: "Draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  
+  - name: "pages_data"
+    label: "Side Indhold"
+    files:
+      - label: "Forside"
+        name: "homepage"
+        file: "src/data/homepage.json"
+        fields:
+          - {label: "Hero Sektion", name: "hero", widget: "object", fields: [
+              {label: "Titel", name: "title", widget: "string"},
+              {label: "Undertitel", name: "subtitle", widget: "text"}
+            ]}
+          - {label: "Hjælp Sektion", name: "help", widget: "object", fields: [
+              {label: "Titel", name: "title", widget: "string"},
+              {label: "Undertitel", name: "subtitle", widget: "text"},
+              {label: "Punkter", name: "items", widget: "list", fields: [
+                {label: "Titel", name: "title", widget: "string"}
+              ]}
+            ]}
+          - {label: "Om AuroraHuset Sektion", name: "about", widget: "object", fields: [
+              {label: "Titel", name: "title", widget: "string"},
+              {label: "Undertitel", name: "subtitle", widget: "text"},
+              {label: "Punkter", name: "items", widget: "list", fields: [
+                {label: "Titel", name: "title", widget: "string"},
+                {label: "Beskrivelse", name: "description", widget: "text"},
+                {label: "Ikon", name: "icon", widget: "string"}
+              ]},
+              {label: "Footer Tekst", name: "footerText", widget: "text"}
+            ]}
+          - {label: "Målgruppe Sektion", name: "targetGroup", widget: "object", fields: [
+              {label: "Titel", name: "title", widget: "string"},
+              {label: "Undertitel", name: "subtitle", widget: "text"},
+              {label: "Punkter", name: "items", widget: "list", fields: [
+                {label: "Titel", name: "title", widget: "string"},
+                {label: "Beskrivelse", name: "description", widget: "text"},
+                {label: "Ikon", name: "icon", widget: "string"}
+              ]},
+              {label: "Footer Tekst", name: "footerText", widget: "text"}
+            ]}
+          - {label: "Ophold Sektion", name: "stay", widget: "object", fields: [
+              {label: "Titel", name: "title", widget: "string"},
+              {label: "Undertitel", name: "subtitle", widget: "text"},
+              {label: "Punkter", name: "items", widget: "list", fields: [
+                {label: "Titel", name: "title", widget: "string"}
+              ]},
+              {label: "Indhold Titel", name: "contentTitle", widget: "string"}
+            ]}
+          - {label: "Faser Sektion", name: "phases", widget: "object", fields: [
+              {label: "Titel", name: "title", widget: "string"},
+              {label: "Undertitel", name: "subtitle", widget: "text"},
+              {label: "Punkter", name: "items", widget: "list", fields: [
+                {label: "Titel", name: "title", widget: "string"},
+                {label: "Beskrivelse", name: "description", widget: "text", required: false},
+                {label: "Ikon", name: "icon", widget: "string"},
+                {label: "Underpunkter", name: "listItems", widget: "list", required: false}
+              ]}
+            ]}
+          - {label: "Donationer Sektion", name: "donations", widget: "object", fields: [
+              {label: "Titel", name: "title", widget: "string"},
+              {label: "Undertitel", name: "subtitle", widget: "text"},
+              {label: "Punkter", name: "items", widget: "list", fields: [
+                {label: "Titel", name: "title", widget: "string"},
+                {label: "Beskrivelse", name: "description", widget: "text"},
+                {label: "Ikon", name: "icon", widget: "string"}
+              ]},
+              {label: "Footer Tekst", name: "footerText", widget: "text"}
+            ]}
+          - {label: "Samarbejde Sektion", name: "collaboration", widget: "object", fields: [
+              {label: "Titel", name: "title", widget: "string"},
+              {label: "Undertitel", name: "subtitle", widget: "text"}
+            ]}
+          - {label: "Job Sektion", name: "jobs", widget: "object", fields: [
+              {label: "Titel", name: "title", widget: "string"},
+              {label: "Undertitel", name: "subtitle", widget: "text"}
+            ]}
