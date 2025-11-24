@@ -13,33 +13,5 @@
   <script>
     CMS.registerPreviewStyle('/admin/preview.css');
   </script>
-
-  <!-- Auto-detect environment and load appropriate config -->
-  <script>
-    // Check if we're running locally (localhost or 127.0.0.1)
-    const isLocal = window.location.hostname === 'localhost' || 
-                    window.location.hostname === '127.0.0.1' ||
-                    window.location.hostname === '';
-    
-    if (isLocal) {
-      // Local development - use proxy backend
-      console.log('🔧 Loading local development config (proxy backend)');
-      CMS.init({
-        config: {
-          load_config_file: true,
-          config_url: '/admin/config.yml'
-        }
-      });
-    } else {
-      // Production - use DecapBridge PKCE authentication
-      console.log('🔒 Loading production config (DecapBridge PKCE auth)');
-      CMS.init({
-        config: {
-          load_config_file: true,
-          config_url: '/admin/config-production.yml'
-        }
-      });
-    }
-  </script>
 </body>
 </html>
