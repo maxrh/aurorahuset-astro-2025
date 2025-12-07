@@ -20,7 +20,6 @@ Læs mere på [Tilbudsportalen](https://tilbudsportalen.dk/tilbudssoegning/tilbu
 
 Vi møder kvinder og børn med respekt, støtte og tryghed – og ser deres ressourcer og muligheder frem for de begrænsninger, der kan præge handlinger.
 
-
 Vi arbejder blandt andet for at: 
 
 * Bring håb og omsorg til kvinder og børn, der har været udsat for vold
@@ -92,3 +91,5 @@ Det betyder:
 * At vi støtter den enkelte i at sætte grænser, genvinde værdighed og handle på egne præmisser
 
 Vores tilgange og metoder styrker kvinders og børns **position som hovedaktører i deres eget liv**. Støtten handler ikke om at “fikse” nogen – men om at stå ved siden af og skabe plads til udvikling, refleksion og nye muligheder.
+
+Aurorahuset er både medlem hos LOS- Landsorganisationen for sociale tilbud og Dansk Sundhed og Velfærd
