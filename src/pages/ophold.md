@@ -74,4 +74,4 @@ Det betyder, at kvinder og børn mødes med **forståelse, respekt og håb** –
 I AuroraHuset ønsker vi, at alle skal føle sig trygge, respekterede og velkomne.
 Vores husorden er ikke blot et sæt regler – det er vores fælles aftale om, hvordan vi passer på hinanden og skaber et godt hjem. Her finder du retningslinjer for hverdagen, fællesskab og sikkerhed.
 
-[Hent Husorden](https://www.example.com)
+[](https://iftpm365.sharepoint.com/:b:/s/Data/IQDeQW5HzKFASozpzUKRpkCsAXlgdGapKhfPTRk2RXx5WHo?e=CJ0QNt)[](https://www.example.com)
