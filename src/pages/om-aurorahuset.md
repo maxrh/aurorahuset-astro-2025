@@ -2,7 +2,7 @@
 title: Om AuroraHuset
 layout: ~/layouts/MarkdownLayout.astro
 ---
-Aurora betyder morgenrøde eller daggry – det første lys efter mørket.
+Aurora betyder morgenrød eller daggry – det første lys efter mørket.
 Navnet symboliserer håb og forvandling og afspejler vores tro på, at en ny begyndelse altid er mulig.
 
 Aurorahuset er et krisecenter, hvor kvinder og deres børn tilbydes midlertidigt ophold i trygge, omsorgsfulde og professionelle rammer. Vi arbejder ud fra **Traumebevidst Tilgang, Recovery** og **Responsbaseret Praksis** – og bygger vores indsats på værdier som **respekt, ligeværd og handlekraft**.
