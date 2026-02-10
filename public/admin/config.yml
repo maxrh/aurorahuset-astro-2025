@@ -30,7 +30,7 @@ auth:
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 # Site URL - used for previews and links
-site_url: https://aurorahuset-astro-2025.pages.dev
+site_url: https://kcaurora.dk
 
 # These lines should *not* be indented
 media_folder: "public/images/uploads" # Media files will be stored in the repo under public/images/uploads
