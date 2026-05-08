@@ -16,7 +16,7 @@ Du kan fx forvente:
 * Hjælp til at skabe overblik over bolig, økonomi og fremtid
 * Respekt for dine valg, grænser og ønsker for dit liv
 
-Vi lytter – også hvis du er i tvivl: **53 71 46 88**
+Vi lytter – også hvis du er i tvivl: **53 71 61 00**
 
 ### Et sted med ro, respekt og håb
 
